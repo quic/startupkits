@@ -1,0 +1,106 @@
+/* Copyright (c) 2020, Qualcomm Innovation Center, Inc. All rights reserved. */
+/* SPDX-License-Identifier: BSD-3-Clause */
+
+.sidebar {
+    width: 300px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    display: block;
+    color: black;
+    padding: 2px;
+    text-decoration: none;
+    font-size: 15px;
+    padding-bottom: 1px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.sidebar a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.sidebar a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+
+div.content {
+    margin-left: 350px;
+    margin-top: 70px;
+    height: 100%;
+    float: left;
+    width: 100%;
+    overflow: auto;
+    /* position: fixed; */
+}
+
+div.content-home {
+    text-align: center;
+    margin-top: 70px;
+    height: 100%;
+    float: left;
+    overflow: auto;
+}
+.mainnav a {
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.mainnav a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+
+div #markdown {width: 60%;}
+
+code {background-color: #f2f2f2;}
+
+code.console {
+    background-color:black;
+    color:white;
+    display:block;
+    overflow:auto;
+    padding:.5rem .5rem;
+    text-align:left;
+    text-shadow:none;
+}
+
+code.warning {
+    background-color:#fff5b1;
+    border-radius:3px;
+    color:#111;
+    display:block;
+    margin-bottom:1rem;
+    padding:.5rem .5rem;
+    overflow:auto;
+    text-align:left;
+}
+
+img {
+    margin-bottom: 10px;
+    border:0;
+    border-radius:.125rem;
+    height:auto;
+    max-width:100%
+} 
+
+table,th,td {
+    border: 2px solid grey;
+    table-layout: fixed;
+    width: 110%;
+    font-size:18px;
+    line-height:25px;
+    letter-spacing:1px;
+       
+} 
+table.pinout {width:75%;}
+tr:nth-child(even){background-color: #f2f2f2}
