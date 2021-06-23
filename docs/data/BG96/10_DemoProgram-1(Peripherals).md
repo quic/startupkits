@@ -2,16 +2,14 @@
 # 10. Demo Program-1(Peripherals)
 
 ------------
-- If compile and built then the apps will be available in the below directory
-    - `C:\BG96\SW\BG96MAR04A02M1G_01.002.01.002\sdk\Quectel_BG96_QuecOpen_SDK_Package_V4.2.4\SDK\bin`
-- Step by step procedure for testing below peripherals is explained in this session.
-     - Example 1 : UART
-     - Example 2 : I2C
-     - Example 3 : SPI
-     - Example 4 : GPIO_in
-     - Example 5 : GPIO_output
-     - Example 6 : RTC
-     - Example 7 : ADC
+Step by step procedure for testing peripherals is explained below.
+ - Example 1 : UART
+ - Example 2 : I2C
+ - Example 3 : SPI
+ - Example 4 : GPIO_in
+ - Example 5 : GPIO_output
+ - Example 6 : RTC
+ - Example 7 : ADC
 
 __10.1 Example&#95;uart Application:__
 
@@ -54,6 +52,7 @@ __BG96 I2C:__
 <tr><th>I2C signals</th><th>On Dev-Kit</th><th>BG96 Pin #</th></tr>
 <tr><td>SCL</td><td>J8.7</td><td>40</td></tr>
 <tr><td>SDA</td><td>J8.8</td><td>41</td></tr>
+<tr><td>GND</td><td>J8.11</td><td>NA</td></tr>
 </table><br>
 
 __Steps to setup Dev-kit & serial port__
@@ -127,7 +126,7 @@ This is an example code for RTC. This example application set a defined time (19
 
 -  Disable QFLOG or upgrade the firmware on BG96 board 
 -  Clean and build atc&#95;pipe example code. <a href="#" target="_blank" onclick="LoadPage(8);return false;">Refer section 8</a>
--  Flash rtc&#95;pipe binary image (quectel&#95;demo&#95;atc&#95;pipe.bin and oem&#95;app&#95;path.ini). <a href="#" target="_blank" onclick="LoadPage(9);return false;">Refer section 9</a>
+-  Flash rtc&#95;pipe binary image (quectel&#95;demo&#95;rtc&#95;pipe.bin and oem&#95;app&#95;path.ini). <a href="#" target="_blank" onclick="LoadPage(9);return false;">Refer section 9</a>
 - Connect UART2 to the PC using USB to serial converter, and open a terminal tool at baud rate 115200, Review the logs<br>
 ![N|Solid](../pics/BG96/bg96-rtc.jpg)<br>
 
@@ -138,7 +137,7 @@ This is an example code for ADC input.  This example application reads ADC0 and 
 `Note: Maximum ADC input voltage is 1800mv. Please make sure that the ADC input voltage is not more than 1800mv.`
 
 - Clean and build adc&#95;pipe example code. <a href="#" target="_blank" onclick="LoadPage(8);return false;">Refer section 8</a>
-- Flash the ADC binary image (quectel_demo_adc.bin and oem_app_path.ini). <a href="#" target="_blank" onclick="LoadPage(9);return false;">Refer section 9</a>
+- Flash the ADC binary image (quectel&#95;demo&#95;adc.bin and oem&#95;app&#95;path.ini). <a href="#" target="_blank" onclick="LoadPage(9);return false;">Refer section 9</a>
 - Restart the board
 - Use TeraTerm or QFLOG to see the debug logs. <a href="#Compilation%20Instructions"><a href="#" target="_blank" onclick="LoadPage(5);return false;">Refer section 5.5</a><br>
 ![N|Solid](../pics/BG96/bg96-adc.jpg)

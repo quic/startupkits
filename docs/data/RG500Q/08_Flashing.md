@@ -1,5 +1,0 @@
-# 8. Flashing Instructions
-
-------------
-
-------------

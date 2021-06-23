@@ -13,7 +13,7 @@ __5.1 Identify Resources__ ___(Quectel)___
       - SDK contains the source code and sample applications.
       - File Name: `SC66_Android10.0_Quectel_SDK_r008_20200604.tar.gz`
    2. Quectel Base Binaries
-      - Pre-built images/binaries required for RG500Q, will be used in Recovery.
+      - Pre-built images/binaries required for SC66, will be used in Recovery.
       - File Name: `SC66ENAR03A01_BP01.001_Android10.0.0.01.001_update.zip`
    3. QFIL Tool
       - Tool which runs in Windows machine and used flash the prebuilt images for first time or at recovery using emergency download mode(EDL)
@@ -40,7 +40,7 @@ __5.4 Create the SC66 folder struture in windows command prompt__
 
 ![N|Solid](../pics/SC66/sc66-file-format.jpg)
 
-__5.5 Setup SC20 folder struture__
+__5.5 Setup SC66 folder struture__
 
    1. Copy the Downloded files to SC66 folder struture. 
     - Copy `SC66_Android10.0_Quectel_SDK_r008_20200604.tar.gz` to `C:\SC66\SW\`

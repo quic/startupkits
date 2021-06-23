@@ -219,11 +219,11 @@ Power On switch is used to Turn on/off the RG500Q Evaltion kit by pressing the p
 
 Reset switch can be used to reset the module by pressing the push button `S2`. 
 
-#### USB Boot switch(S3.1)
+#### USB Boot switch(S3-1)
 
-USB Boot is used to force the module to enter emergency download mode by pulling up USB_BOOT pin to VDD_EXT through `S3.1`
+USB Boot is used to force the module to enter emergency download mode by pulling up USB&#95;BOOT pin to VDD&#95;EXT through `S3.1`
 
-#### Auto Power-On(S3.2)
+#### Auto Power-On(S3-2)
 
 PON is an auto power on feature & the module can be turned on by pulling this pin high through `S3.2`
 

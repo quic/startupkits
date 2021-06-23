@@ -86,7 +86,7 @@ __6.3.1 Setting up of CLI__
      - `AT+QCFGEXT=qflogen,1`<br>
    ![N|Solid](../pics/BG96/bg96-QFLOG-enable.jpg)<br>
 
-  ####`Note:` 
+  ####`Attention!!` 
      ```warning
      Reset the module after executing these two AT commands
      Use "USB AT PORT" in python script.`

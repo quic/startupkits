@@ -13,7 +13,7 @@ __5.1 Identify Resources__ ___(Quectel)___
       - SDK contains the source code and sample applications.
       - File Name: `SC20_Android7.1.2_Quectel_SDK_r00049_20181106.tar.gz`
    2. Quectel Base Binaries
-      - Pre-built images/binaries required for RG500Q, will be used in Recovery.
+      - Pre-built images/binaries required for SC20, will be used in Recovery.
       - File Name: `SC20ESAR06A09_BP01.009_update.zip`
    3. QFIL Tool
       - Tool which runs in Windows machine and used flash the prebuilt images for first time or at recovery using emergency download mode(EDL)

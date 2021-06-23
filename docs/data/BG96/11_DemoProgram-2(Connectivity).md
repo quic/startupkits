@@ -1,12 +1,10 @@
-# 11. Demo Program-2(Peripherals)
+# 11. Demo Program-2(Connectivity)
 
 ------------
-- If compile and built then the apps will be available in the below directory
-`C:\BG96\SW\Apps\BG96MAR04A02M1G_01.002.01.002\sdk\Quectel_BG96_QuecOpen_SDK_Package_V4.2.4\SDK\bin`
-- Step by step procedure for testing below peripherals is explained in this session.
-    - Example 1 : GNSS
-    - Example 2 : HTPP
-    - Example 3 : MQTT
+Step by step procedure for testing connectivity peripherals is explained below.<br>
+- Example 1 : GNSS
+- Example 2 : HTPP
+- Example 3 : MQTT
 
 __11.1 Example&#95;GNSS Application:__
 

@@ -115,7 +115,7 @@ This section will guide to copy all files in one folder, which is necessary to f
         - `Instructions`: <a href="https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/" target="_blank">www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/</a>
 - Install the ADB drivers for RG500Q.
     - Install the `C:\RG500Q\Tools\UniversalAdbDriverSetup.exe`
-- Extract `C:\RG500Q\Tools\MobaXterm_Installer_v20.1.zip` to `C:\SC66\Tools\MobaXterm_Installer_v20.1` Use default options to install
+- Extract `C:\RG500Q\Tools\MobaXterm_Installer_v20.1.zip` to `C:\RG500Q\Tools\MobaXterm_Installer_v20.1` Use default options to install
     - `C:\RG500Q\Tools\MobaXterm_Installer_v20.1\MobaXterm_Installer_v20.1.exe`
 - Alternative ADB driver Instructions Videos
     - <a href="https://youtu.be/gOT2JlqNjuA" target="_blank">https://youtu.be/gOT2JlqNjuA</a>

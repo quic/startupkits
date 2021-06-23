@@ -47,8 +47,8 @@
 <tr><td>GPIO 68</td><td>13</td><td>14</td><td>SPI MOSI</td></tr>
 <tr><td>GPIO 97</td><td>15</td><td>16</td><td>UART1 TX</td></tr>
 <tr><td>GPIO 98</td><td>17</td><td>18</td><td>UART1 RX</td></tr>
-<tr><td>PWR KEY</td><td>19</td><td>20</td><td>RESET</td></tr>
-<tr><td>1.8V</td><td>21</td><td>22</td><td>ADC</td></tr>
+<tr><td>PWR KEY</td><td>19</td><td>20</td><td>ADC</td></tr>
+<tr><td>1.8V</td><td>21</td><td>22</td><td>RESET</td></tr>
 <tr><td>3.3V</td><td>23</td><td>24</td><td>GND</td></tr>
 </table>
 

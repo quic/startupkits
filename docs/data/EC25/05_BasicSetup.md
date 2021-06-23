@@ -90,7 +90,7 @@ __5.7 Setup USB Driver & Serial Terminal__
     - `C:\EC25\Tools\teraterm-4.105.exe `
 
 __5.8 Setup Debugger Tools__
-1. Extract `C:\EC25\Tools\platform-tools_r29.0.6-windows.zip` to `C:\EC25\Tools\platform-tools` and verify the installation
+- Extract `C:\EC25\Tools\platform-tools_r29.0.6-windows.zip` to `C:\EC25\Tools\platform-tools` and verify the installation
     - `C:\EC25\Tools\platform-tools\adb.exe`
     - `C:\EC25\Tools\platform-tools\fastboot.exe`
     - Add above path to adb & fastboot location to __System Path__.

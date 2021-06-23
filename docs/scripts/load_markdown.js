@@ -40,6 +40,28 @@ function createBoards(data) {
     document.getElementById("board").innerHTML = string
 }
 
+function createCardString(name, pic) {
+    card_start = `<div class="card">`
+    title = `<header class="article-header"> <h2 class="article-title">` +
+        name +  ` Development Kit` +
+        `</h2> </header>`
+    image = `<img src=` + `"./pics/` + name + `/` + pic + `" alt="` + name + `" style="width:100%">`
+    button = `<a href="./` + name + `" class="btn btn-primary">OnBoarding Documentation</a>`
+    card_end = `</div>`
+    return card_start + title + image + button + card_end
+}
+
+function createCards() {
+    string = ``
+    Object.keys(cards_info).forEach(element => {
+        string = string + createCardString(element, cards_info[element]["Banner"])
+        console.log(element + cards_info[element]["Banner"])
+    })
+    try {
+        document.getElementById("markdown cards").innerHTML = string
+    } catch (error) { }
+}
+
 async function createSteps() {
     string = ``
     markdown = ``
@@ -83,6 +105,7 @@ function getUrl() {
 function setup(data) {
     createBoards(data)
     createSteps()
+    createCards()
     LoadPage(1)
 }
 

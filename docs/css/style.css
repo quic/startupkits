@@ -112,7 +112,7 @@ table,th,td {
 table.pinout {width:75%;}
 tr:nth-child(even){background-color: #f2f2f2}
 
-* {
+{
     box-sizing: border-box;
 }
 
@@ -183,13 +183,22 @@ body {
 }
 
 .card:not(:first-child) {
-    margin-left: -130px;
+    margin-left: -15%;
 }
 
 .card:hover {
     transform: translateY(-1rem);
+    transform: scale(1.5);
+    z-index: 200;
+    padding-top: 5%;    
+}
+.card:first-child:hover {
+    padding-left: 5%;  
+}
+.card:last-child:hover {
+    padding-right: 5%;  
 }
 
 .card:hover~.card{
-    transform: translateX(130px);
+    transform: translateX(70%);
 }
