@@ -16,3 +16,6 @@ Startup kits are designed for any developers who work with the modules, regardle
 Ideal users for startup platforms and kits include startups, incubators, internal groups, universities and design-transfer programs. Support is provided by local QTI labs.
 
 Qualcomm Snapdragon, Qualcomm MDM9206, Qualcomm MDM9207 and Qualcomm SDM660 are products of Qualcomm Technologies, Inc., and/or its subsidiaries.
+
+## License
+Startup Kits is licensed under the BSD 3-clause "New" or "Revised" License. Check out the [LICENSE](LICENSE) for more details.
