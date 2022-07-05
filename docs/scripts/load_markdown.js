@@ -21,7 +21,32 @@ function LoadPage(index) {
                     document.getElementById("markdown").innerHTML = markdown
                     mermaid.init(undefined, document.getElementsByClassName("mermaid"))
 
-                    window.scrollTo(0,0)
+                    const mk = document.getElementById("markdown");
+
+                    for(const h2 of mk.querySelectorAll("h1, h2, h3, h4, h5, h6"))
+                        h2.innerHTML = `<a href="#${index}#${h2.id}">${h2.innerHTML}</a>`
+
+                    const id = location.hash.split("#")[2];
+
+                    console.log(id)
+                    function findPos(obj) {
+                        var curtop = 0;
+                        if (obj.offsetParent) {
+                            do {
+                                curtop += obj.offsetTop;
+                            } while (obj = obj.offsetParent);
+                            return [curtop];
+                        }
+                    }
+
+                    window.scroll(0,0);
+
+                    if(id)
+                    {
+                        window.scroll(0,findPos(document.getElementById(id))
+                            -document.querySelector("body > nav").clientHeight);
+                    }
+
                 }
                 r.readAsText(blob);
 
@@ -67,7 +92,7 @@ async function createSteps() {
     markdown = ``
     i = 1
     Object.keys(data[board]).forEach(element => {
-        string = string + `<a id="`+element+`" title="`+ element +`'" href="#` + element + `" onclick="LoadPage(` + i + `);return false;"> ` + i + ". " + element + ` </a>`
+        string = string + `<a id="`+element+`" title="`+ element +`'" href="#` + element + `" onclick="LoadPage(` + i + `);location.href = '#';return false;"> ` + i + ". " + element + ` </a>`
         i++
         url = data_url + board + '/' + data[board][element]
         fetch(url)
@@ -85,7 +110,7 @@ async function createSteps() {
                     mermaid.init(undefined, document.getElementsByClassName("mermaid"))
                 }
                 r.readAsText(blob);
-            });
+            })
     })
     document.getElementById("step").innerHTML = string
 }
@@ -106,8 +131,16 @@ function setup(data) {
     createBoards(data)
     createSteps()
     createCards()
-    LoadPage(1)
 }
 
 getUrl()
 setup(data)
+
+window.addEventListener("load", () => {
+    const pg = location.hash.split("#")[1];
+
+    if(Number(pg))
+        LoadPage(Number(pg));
+    else
+        LoadPage(1)
+})
