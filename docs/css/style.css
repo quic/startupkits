@@ -98,7 +98,7 @@ img {
     border-radius:.125rem;
     height:auto;
     max-width:100%
-} 
+}
 
 table,th,td {
     border: 2px solid grey;
@@ -107,8 +107,8 @@ table,th,td {
     font-size:18px;
     line-height:25px;
     letter-spacing:1px;
-       
-} 
+
+}
 table.pinout {width:75%;}
 tr:nth-child(even){background-color: #f2f2f2}
 
@@ -190,15 +190,20 @@ body {
     transform: translateY(-1rem);
     transform: scale(1.5);
     z-index: 200;
-    padding-top: 5%;    
+    padding-top: 5%;
 }
 .card:first-child:hover {
-    padding-left: 5%;  
+    padding-left: 5%;
 }
 .card:last-child:hover {
-    padding-right: 5%;  
+    padding-right: 5%;
 }
 
 .card:hover~.card{
     transform: translateX(70%);
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
+    text-decoration: none;
+    color: black;
 }
