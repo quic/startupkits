@@ -2,15 +2,16 @@
 
 ------------
 
-__10.1 Switch to EDL Mode__
-   - Turn On EDL Switch in the Development Kit to ON(SW2)
+## 10.1 Switch to EDL Mode
 
-![N|Solid](../pics/SC20/sc20-edl-option.jpg)
+   - Turn On EDL Switch in the Development Kit to ON/EDL `USB BOOT`
 
-__10.2 Extract Images__
+![N|Solid](../pics/SC20/sc20-edl-hw-cfg.jpg)
+
+## 10.2 Extract Images
    - `C:\SC20\SW\SC20ESAR06A09_BP01.009_update.zip` to `C:\SC20\SW\SC20ESAR06A09_BP01.009_update`
 
-__10.3 Launch QFIL and Configure__
+## 10.3 Launch QFIL and Configure
    - Launch `C:\Program Files (x86)\Qualcomm\QPST\bin\QFIL.exe`
    - Select EDL 9008 Port
    - Select Flat Build Option
@@ -20,14 +21,14 @@ __10.3 Launch QFIL and Configure__
       - `rawprogram_unsparse.xml`
       - `patch0.xml`
 
-__10.4 Download__
+## 10.4 Download
 
-![N|Solid](../pics/SC20/sc20-qfil.jpg)
+![N|Solid](../pics/SC20/sc20-edl-flashing-proc.jpg)
 
-__Turn off EDL Switch and Restart Device__
+`Turn OFF EDL Switch and Restart Device`
 
 
-####`Attention!!!`
+`Attention!!!`
 ```warning
 Note: Might require to restart PC or QFIL or device incase of firehose error
 ```

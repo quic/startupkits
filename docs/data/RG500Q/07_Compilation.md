@@ -9,17 +9,17 @@ This section guides with step by step procedure to setup build environment, uplo
 
 ```console
 cd /local/mnt/workspace/
-wget https://mirrors.edge.kernel.org/caf_patches/external/startupkit/rg500q/RG500Q-Relv1.1/sdk_manager.sh
+wget --no-check-certificate https://git.codelinaro.org/clo/startup-kits/patches/-/raw/master/rg500q/RG500Q-Relv2.0/sdk_manager.sh
 ```
 
-![N|Solid](../pics/RG500Q/rg500q-wget.jpg)
+![N|Solid](../pics/RG500Q/rg500q-compilation-sdkmgr1.jpg)
 
 ## 7.2 Updating Permission
 
 ```console
 chmod +x sdk_manager.sh
 ```
-![N|Solid](../pics/RG500Q/rg500q-chmod.jpg)
+![N|Solid](../pics/RG500Q/rg500q-compilation-sdkmgr2.jpg)
 
 ## 7.3 Build SDK
 
@@ -29,110 +29,103 @@ chmod +x sdk_manager.sh
 ```console
 ./sdk_manager.sh
 ```
-![N|Solid](../pics/RG500Q/rg500q-sdk-manager-build-sh.jpg)
+![N|Solid](../pics/RG500Q/rg500q-compilation-setup-new.jpg)
 
 ## 7.4 Installing Packages
 
-#####`ATTENTION!!!`
+`Attention!!!`
 ```warning
 Please verify the instructions and proceed with confirmation.
 ```
 
-![N|Solid](../pics/RG500Q/rg500q-packages.jpg)
-![N|Solid](../pics/RG500Q/rg500q-packages1.jpg)
+![N|Solid](../pics/RG500Q/rg500q-compilation-install-tools.jpg)
 
-## 7.5 Download CAF Resources
+## 7.5 Setup GIT
 
-![N|Solid](../pics/RG500Q/rg500q-lftp.jpg)
+![N|Solid](../pics/RG500Q/rg500q-compilation-setup-git.jpg)
 
-## 7.6 Setup Folder Structure 
+## 7.6 Download CLO Resources
 
-![N|Solid](../pics/RG500Q/rg500q-setup-root.jpg)
+![N|Solid](../pics/RG500Q/rg500q-compilation-download-clo.jpg)
 
-### 7.6.1 Upload SW Packages to Linux Machine 
-
-#####`ATTENTION!!!`
+## 7.7 Setup Folder Structure 
 ```warning
-This section demonstrates, user have to upload SW Packages manually to the Linux machine from windows machine.
-```
-  - Start & connect to SFTP explorer using mobaXterm
-  - Upload files using SFTP session created in previous step
-
-```code
-  From : C:\RG500Q\SW\RG500QEAAAR11A02M4G_OCPU_01.001.01.001-toolchain.tar.gz and  C:\RG500Q\SW\ql-ol-extsdk.tar.gz (Windows Environment)
-  To   : /local/mnt/workspace/RG500Q/patches  (Linux Environment)
-```
-![N|Solid](../pics/RG500Q/rg500q-upload.jpg)
- 
-### 7.6.2 Continue the Setup Folder Structure 
-
-- Continue with setup once toolchain and sdk are uploaded successfully.
-
-![N|Solid](../pics/RG500Q/rg500q-setup-root1.jpg)
-
-## 7.7 Setup Tool Chain
-
-![N|Solid](../pics/RG500Q/rg500q-tool-chain.jpg)
-
-## 7.8 Setup SDK
-
-![N|Solid](../pics/RG500Q/rg500q-setup-sdk1.jpg)
-![N|Solid](../pics/RG500Q/rg500q-setup-sdk2.jpg)
-
-## 7.9 Setup GIT
-
-#####`ATTENTION!!!`
-```warning
-This step may take few minutes to complete
+Verification of SDK and other packages uploaded (Section 6.4) are part of this step,
+Please ensure necessary files are uploaded to linux machine or upload when it is instructed.
 ```
 
-![N|Solid](../pics/RG500Q/rg500q-git.jpg)
-![N|Solid](../pics/RG500Q/rg500q-git1.jpg)
+![N|Solid](../pics/RG500Q/rg500q-compilation-setup-root.jpg)
 
-## 7.10 Applying the Patches
+## 7.8 Setup Tool Chain
 
-![N|Solid](../pics/RG500Q/rg500q-apply-patches.jpg)
-![N|Solid](../pics/RG500Q/rg500q-apply-patches1.jpg)
+![N|Solid](../pics/RG500Q/rg500q-compilation-setup-tool-chain.jpg)
+
+## 7.9 Setup SDK
+
+![N|Solid](../pics/RG500Q/rg500q-compilation-setup-sdk1.jpg)
+![N|Solid](../pics/RG500Q/rg500q-compilation-setup-sdk2.jpg)
+
+## 7.10 Applying Patches
+
+![N|Solid](../pics/RG500Q/rg500q-compilation-apply-patches1.jpg)
+![N|Solid](../pics/RG500Q/rg500q-compilation-apply-patches2.jpg)
 
 ## 7.11 Build Images
 
-#####`ATTENTION!!!`
+`Attention!!!`
 ```warning
 This step may take few hours to complete
 ```
-![N|Solid](../pics/RG500Q/rg500q-build-images.jpg)
-![N|Solid](../pics/RG500Q/rg500q-build-images1.jpg)
+![N|Solid](../pics/RG500Q/rg500q-compilation-build-all1.jpg)
+![N|Solid](../pics/RG500Q/rg500q-compilation-build-all2.jpg)
+
+### 7.11.1 Build Failure
+
+This section guides with procedure to recover from failure using retry mechanism, incase of build failure due to reasons such as more number of threads created, some packages are not created in last iteration and missing images. Recommendation for such events are retrying the compilation/build steps as prompted by the `sdkmanager.sh` . To debug further, use logs available in the Build Directory(for eg. `/local/mnt/workspace/RG500Q/`)
+
+![N|Solid](../pics/RG500Q/rg500q-compilation-build-retry.jpg)
 
 ## 7.12 Finish Setup
 
 -	Enter `y` for Finishing Build Setup.	
 
-![N|Solid](../pics/RG500Q/rg500q-finishing-build.jpg)
+![N|Solid](../pics/RG500Q/rg500q-compilation-finish-build.jpg)
 
 __Note:__ Select `100` for quit the build script `Quit` from the main menu. 
 
-## 7.14 Download Built Images
+## 7.13 Download Built Images
 
 Download built images from linux machine to windows machine using SFTP
 
 ```code
-From  : /local/mnt/workspace/RG500Q_SDK/ql-ol-sdk/target/ (Linux)
+From  : /local/mnt/workspace/RG500Q/Linux_SDK_RG500Q/bin/RG500Q.zip (Linux)
 To    : C:\RG500Q\SW\Built_Images (Windows)
 ```
-__`List of Images`__
-<table class="pinout">
-<tr><th>Images</th><th>Image Names</th><th>Description</th></tr>
-<tr><td>Boot</td><td> sdxprairie-boot.img</td><td>Kernel Image</td></tr>
-<tr><td>System</td><td>sdxprairie-sysfs.ubi</td><td>System Images</td></tr>
-<tr><td>ABOOT</td><td>abl.elf</td><td>Bootloader Image</td></tr>
+__`RG500Q.zip Contents`__
+<table class="pinout" style="width:60%">
+<tr><th style="width:10%">Sl No</th><th style="width:30%">File Name</th><th style="width:20%">Description</th></tr>
+<tr><td>1</td><td> sdxprairie-boot.img</td><td>Kernel Image</td></tr>
+<tr><td>2</td><td>sdxprairie-sysfs.ubi</td><td>System Images</td></tr>
+<tr><td>3</td><td>abl.elf</td><td>Bootloader Image</td></tr>
+<tr><td>4</td><td>load.bat</td><td>Flashing Script</td></tr>
 </table><br>
 
 ```warning
 Use MobaXterm UI to download images from ubuntu
   - Select the files, drag and drop to desired folder
-  - Total 3 files, select all 3(use Ctrl key to select) and download
 ```
 
-![N|Solid](../pics/RG500Q/rg500q-download.jpg)
+![N|Solid](../pics/RG500Q/rg500q-compilation-image-download.jpg)
+
+## 7.14 Rebuilding Images (_Optional Step_)
+This section demonstrates, The procedure to rebuild the images in events such as enabling additional features, modifying kernal/boot/system images, removing some patches, addition of a new application and modifying the KConfig.
+
+1. Run the `./sdk_manager.sh`  in linux server.
+2. Select `3` option  for `Make All`
+3. Select `5` option for `Prepare Final Images`
+
+![N|Solid](../pics/RG500Q/rg500q-compilation-rebuild1.jpg)
+![N|Solid](../pics/RG500Q/rg500q-compilation-rebuild2.jpg)
+![N|Solid](../pics/RG500Q/rg500q-compilation-rebuild3.jpg)
 
 --------------------

@@ -2,7 +2,7 @@
 
 ------------
 
-__3.1 Getting Access to Software Resources__
+## 3.1 Getting Access to Software Resources
    1. Downloading Resources from Quectel (requires NDA with Quectel)
       - This provides access to documents, tools, drivers, EFS_Explorer and source code for MDM9206/BG96
       - Write an e-mail to Quectel team requesting for items in the below table
@@ -50,27 +50,14 @@ __3.1 Getting Access to Software Resources__
                   <td>QEfs_V1.0.4.zip</td>
                </tr>
             </table>
-         - Follow instructions from quectel and download resources from quectel cloud storage
+         - Follow instructions from Quectel and download resources from Quectel cloud storage
    2. Download Tools from Qualcomm create point portal. 
       -  This provide access to LLVM Compiler, used for compilation of applications.
       -  Approval is required, please contact with your sales contact to know more details.
       -  Detailed Download process is available <a href="#" target="_blank" onclick="LoadPage(12);return false;">here</a>.<br>
 
-__3.2 Getting Access to Hardware Resources__<br>
+## 3.2 Getting Access to Hardware Resources<br>
   1. This requires approvals from hardware partner, request to contact hardware sales partner.<br>
-  
-__3.3 Download Additional tools__
-
-   __3.3.1 Download python 2.7__<br>
-   Open the Python download page from the <a href="https://www.python.org/download/releases/2.7/"target="_blank">link to download</a> to download the corresponding revision of Python for Windows/Linux.
-
-   __3.3.2 Download python 3.6.1__<br>
-   Download python 3.6.1,<a href="https://www.python.org/ftp/python/3.6.1/python-3.6.1-amd64.exe"target="_blank">click here </a>
-
-   __3.3.3 Download Debugging Tools__<br>
-  Download Serial Monitor like Tera-Term application,<a href="https://osdn.net/projects/ttssh2/downloads/72009/teraterm-4.105.exe/" target="_blank">click here</a>
-
-
 
 ------------
 

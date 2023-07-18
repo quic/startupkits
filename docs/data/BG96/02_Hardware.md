@@ -22,7 +22,9 @@
 ## 2.2 Block diagram
 ![N|Solid](../pics/BG96/bg96-block-diagram.jpg)
 
-## 2.3 Peripheral Connector : J8
+## 2.3 Connectors
+
+### 2.3.1 Peripheral Connector : J8
 
 <!-- <table class="spec"> -->
 <table style="width: 40%">
@@ -43,9 +45,9 @@
 <tr><td>I2C SDA</td><td>8</td><td>13</td><td>ADC0</td></tr>
 <tr><td>NC</td><td>9</td><td>12</td><td>ADC1</td></tr>
 <tr><td>3.3V</td><td>10</td><td>11</td><td>GND</td></tr>
-</table>
+</table><br>
 
-## 2.4 Peripheral Connector : J9
+### 2.3.2 Peripheral Connector : J9
 
 <!-- <table class="spec"> -->
 <table style="width: 40%">
@@ -66,12 +68,13 @@
 <tr><td>SPI1 MISO</td><td>8</td><td>13</td><td>SPI1 CS</td></tr>
 <tr><td>SPI1 CLK</td><td>9</td><td>12</td><td>SPI1 MOSI</td></tr>
 <tr><td>PSM IND</td><td>10</td><td>11</td><td>GND</td></tr>
-</table>
+</table><br>
 
 
-## 2.5 Hardware Board details.
+## 2.4 Hardware Board details.
 
 ![N|Solid](../pics/BG96/bg96-hw-details.jpg)
+<br>
 
 1.	3.7V Rechargeable Battery Connector (B1)
 2.	5V Micro USB Connector (J2)
@@ -88,19 +91,19 @@
 13.	20-Pin Header Connector (J8)
 14.	20-Pin Header Connector (J9)
 
-### 2.5.1 Power Supply
+### 2.4.1 Power Supply
 
 There are three power inlet options: 
 - 5V Micro USB connector (J2)
 - 5V DC Power Jack (J1)
 - Battery (B1)
 
-### 2.5.2 Power Switches
+### 2.4.2 Power Switches
 
 - Power Key (`SW1`) - Turn on/off the module. BG96-board can be turned ON by driving the PWRKEY pin to a low level for at least 500ms. It can be turned OFF by driving the PWRKEY pin to a low level voltage for at least 650ms
 - Power Reset (`SW2`) – This switch is used to reset the module. The module can be reset by driving the RESET_N to a low level voltage for time between 150ms and 460ms
 
-### 2.5.3 Status LED's
+### 2.4.3 Status LED's
 - Battery Power Good Status LED (D4)
     - LED turn OFF when valid input source is connected
     - LED turn ON when invalid source is connected
@@ -119,7 +122,7 @@ There are three power inlet options:
 - Power Status LED (D11) – Board Power status
     - LED turn ON when board powered
   
-### 2.5.4 Antenna
+### 2.4.4 Antenna
 - GSM Antenna (J4)
 - GNSS Antenna (J6)
  

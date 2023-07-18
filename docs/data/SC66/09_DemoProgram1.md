@@ -1,15 +1,16 @@
 # 9. Testing Low Speed Peripherals using BLSP Test App
 
 ------------
+## 9.1 Launch Application
 
-__Open Pre-installed the Sample Application for testing__
+Open Pre-installed the Sample Application for testing
    
 ![N|Solid](../pics/SC66/sc66-blsp-demo-launch.jpg =400x500)
 
-__Test the Application__
+## 9.2 Test the Application
 
 ![N|Solid](../pics/SC66/sc66-blsp-demo.jpg =1150x600)
 
-<a href="#" onclick="LoadPage(2);return false;">Refer Hardware Session for Pinouts</a>
+<a href="#2#23connectors" target="_blank">Refer Hardware Section for Pinouts</a>
 
 ------------

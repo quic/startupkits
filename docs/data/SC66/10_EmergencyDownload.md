@@ -2,15 +2,15 @@
 
 ------------
 
-__10.1 Switch to EDL Mode__
+## 10.1 Switch to EDL Mode
    - Turn On EDL mode using a jumper on J1 in the Development Kit
 
 ![N|Solid](../pics/SC66/sc66_emergency_download.jpg)
 
-__10.2 Extract Images__
+## 10.2 Extract Images
    - `C:\SC66\SW\SC66ENAR03A01_BP01.001_Android10.0.0.01.001_update.zip` to `C:\SC66\SW\SC66ENAR03A01_BP01.001_Android10.0.0.01.001_update`
 
-__10.3 Launch QFIL and Configure__
+## 10.3 Launch QFIL and Configure
    - Launch `C:\Program Files (x86)\Qualcomm\QPST\bin\QFIL.exe`
    - Select EDL 9008 Port
    - Select Flat Build Option
@@ -20,13 +20,14 @@ __10.3 Launch QFIL and Configure__
       - `rawprogram_unsparse.xml`
       - `patch0.xml`
 
-__10.4 Download__
+## 10.4 Download
 
 ![N|Solid](../pics/SC66/Emergency-download.jpg)
 
-__Turn off EDL Switch and Restart Device__
+`Turn OFF EDL Switch and Restart Device`
 
-#### `Attention!!!`
+
+`Attention!!!`
 ```warning
 Note: Might require to restart PC or QFIL or device incase of firehose error
 ```

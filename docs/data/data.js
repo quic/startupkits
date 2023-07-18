@@ -92,7 +92,7 @@ let data_url= "data/"
 
 let cards_info = {
     "RG500Q": {
-        "Banner"                        : "rg500q_banner.jpg",
+        "Banner"                        : "rg500q-overview-banner.jpg",
     },
     "SC66": {
         "Banner"                        : "sc66_banner.jpg",

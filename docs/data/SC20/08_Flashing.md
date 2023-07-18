@@ -2,31 +2,35 @@
 
 ------------
 
-__8.1  Load the Image using script and windows command prompt__
+## 8.1 Load Image (Fastboot)
 
-Load the Images using script and windows command prompt
+This section guides how to flash generated images using `load.bat` in fastboot mode.
+ 
+-  Execute below commands in windows command prompt.  
+
 ```console
-cd c:\SC20\SW\Built_Images
+cd c:\SC20\SW\Built_images
+tar -xf SC20.zip
 load.bat
 ```
-##### `Attention!!`
+`Attention!!!`
 ```warning
 - Disconnect all adb devices from windows machine (eg: android devices, phones, other evk’s)`
 - Connect only ONE SC20 device to PC and check with command “adb devices” is detected`
 - Install adb & fastboot drivers if required.
 ```
-__8.2  Load completed__
 
-![N|Solid](../pics/SC20/sc20-load.jpg)
+![N|Solid](../pics/SC20/sc20-flashing-flash-images.jpg)
 
-__8.3 Emergency Download using <a href="#" onclick="LoadPage(10);return false;">QFIL</a> (Optional)__
+**Load Completed**
 <br>
+## 8.2 Optional Emergency Download _(QFIL)_
 
-__``Warning!!``__
+`WARNING!! Please be sure before performing this procedure, Only for special use cases.`
 ```warning
-Please be sure before performing Emergency Download procedure, Only for special use cases
-```
    - Used to download for first time, Firmware Recovery & Factory downloading procedure
-   - Need to load the images again after recovery to get complete functionality
+   - Need to load the images again after recovery to get complete functionality.
+```
+<a href="#" target="_blank" onclick="LoadPage(10);return false;">Click here for instructions</a>
 
 ------------

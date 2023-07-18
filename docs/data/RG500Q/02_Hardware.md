@@ -23,12 +23,12 @@
 
 ## 2.2 Block Diagram
 
-![N|Solid](../pics/RG500Q/rg500q-block-diagram1.jpg =1100x640)
+![N|Solid](../pics/RG500Q/rg500q-hardware-block-diagram.jpg =1100x640)
 
 
 ## 2.3 Connectors
 
-#### Peripheral Connector 1 (J28) 
+### 2.3.1 Peripheral Connector 1 (J28)
 
 <table style="width: 40%">
     <colgroup>
@@ -53,7 +53,7 @@
 
 <br>
 
-#### Peripheral Connector 2 (J30)
+### 2.3.2 Peripheral Connector 2 (J30)
 <table style="width: 40%">
     <colgroup>
        <col span="1" style="width: 40%;">
@@ -77,7 +77,7 @@
 
 <br>
 
-#### Debug Uart Connector(J29)
+### 2.3.3 Debug Uart Connector(J29)
 <table style="width: 40%">
         <colgroup>
         <col span="1" style="width: 25%;">
@@ -90,7 +90,7 @@
 
 <br>
 
-#### WLAN Debug Uart Connector(J10)
+### 2.3.4 WLAN Debug Uart Connector(J10)
 <table style="width: 40%">
         <colgroup>
         <col span="1" style="width: 25%;">
@@ -103,7 +103,7 @@
 
 <br>
 
-#### RTC Connector(J1)
+### 2.3.5 RTC Connector(J1)
 <table style="width: 40%">
         <colgroup>
         <col span="1" style="width: 25%;">
@@ -115,7 +115,7 @@
 
 <br>
 
-#### Battery Connector(J3)
+### 2.3.6 Battery Connector(J3)
 
 <table style="width: 40%">
         <colgroup>
@@ -129,7 +129,7 @@
 
 <br>
 
-#### Microphone connector(J13)
+### 2.3.7 Microphone connector(J13)
 <table style="width: 40%">
         <colgroup>
         <col span="1" style="width: 25%;">
@@ -141,7 +141,7 @@
 
 <br>
 
-#### Loudspeaker connector(J14)
+### 2.3.8 Loudspeaker connector(J14)
 <table style="width: 40%">
         <colgroup>
         <col span="1" style="width: 25%;">
@@ -153,7 +153,7 @@
 
 <br>
 
-#### Other Connectors
+### 2.3.9 Other Connectors
 
 <table style="width: 90%">
         <colgroup>
@@ -166,22 +166,24 @@
     <tr><td>J11</td><td>Ethernet connector(RJ45)</td><td>NA</td></tr>
     <tr><td>J12</td><td>3.5mm Audio Jack</td><td>NA</td></tr>
     <tr><td>J16</td><td>USB 3.0/Type-C</td><td>NA</td></tr>
-    <tr><td>ANT0</td><td>5G NR: n41 TRX1 & n79 DIV1<br>LTE: LMHB_TRX</td><td>50 Ohm Impedence</td></tr>
-    <tr><td>ANT1</td><td>5G NR: n41 DIV1 & n79 TRX1<br>LTE: LB_TRX1 & LMHB_DRX</td><td>50 Ohm Impedence</td></tr>
-    <tr><td>ANT2</td><td>5G NR: n79 DIV0</td><td>50 Ohm Impedence</td></tr>
-    <tr><td>ANT3</td><td>5G NR: n79 TRX0</td><td>50 Ohm Impedence</td></tr>
-    <tr><td>ANT4</td><td>5G NR: n77/78 TRX0<br>LTE: MHB_PRX MIMO & UHB_TRX & LAA_DRX</td><td>50 Ohm Impedence</td></tr>
-    <tr><td>ANT5</td><td>5G NR: n41 TRX0 & n77/78 TRX1<br>LTE: UHB_PRX MIMO & LAA_PRX</td><td>50 Ohm Impedence</td></tr>
-    <tr><td>ANT6</td><td>5G NR: n41/n77/n78 DIV0<br>LTE: MHB_DRX MIMO & UHB_DRX & LAA_PRX_MIMO</td><td>50 Ohm Impedence</td></tr>
-    <tr><td>ANT7</td><td>5G NR: n77/78 DIV1<br>LTE: MHB_TRX1 & UHB_DRX MIMO & LAA_DRX_MIMO</td><td>50 Ohm Impedence</td></tr>
-    <tr><td>ANT-GNSS</td><td>GNSS Antenna</td><td>50 Ohm Impedence</td></tr>
+    <tr><td>J17</td><td>SD Card/SIM2 SLOT</td><td>NA</td></tr>
+    <tr><td>J18</td><td>SIM1 SLOT</td><td>NA</td></tr>
+    <tr><td>ANT0</td><td>5G NR: n41 TRX1 & n79 DIV1<br>LTE: LMHB_TRX</td><td>50 Ohm Impedance</td></tr>
+    <tr><td>ANT1</td><td>5G NR: n41 DIV1 & n79 TRX1<br>LTE: LB_TRX1 & LMHB_DRX</td><td>50 Ohm Impedance</td></tr>
+    <tr><td>ANT2</td><td>5G NR: n79 DIV0</td><td>50 Ohm Impedance</td></tr>
+    <tr><td>ANT3</td><td>5G NR: n79 TRX0</td><td>50 Ohm Impedance</td></tr>
+    <tr><td>ANT4</td><td>5G NR: n77/78 TRX0<br>LTE: MHB_PRX MIMO & UHB_TRX & LAA_DRX</td><td>50 Ohm Impedance</td></tr>
+    <tr><td>ANT5</td><td>5G NR: n41 TRX0 & n77/78 TRX1<br>LTE: UHB_PRX MIMO & LAA_PRX</td><td>50 Ohm Impedance</td></tr>
+    <tr><td>ANT6</td><td>5G NR: n41/n77/n78 DIV0<br>LTE: MHB_DRX MIMO & UHB_DRX & LAA_PRX_MIMO</td><td>50 Ohm Impedance</td></tr>
+    <tr><td>ANT7</td><td>5G NR: n77/78 DIV1<br>LTE: MHB_TRX1 & UHB_DRX MIMO & LAA_DRX_MIMO</td><td>50 Ohm Impedance</td></tr>
+    <tr><td>ANT-GNSS</td><td>GNSS Antenna</td><td>50 Ohm Impedance</td></tr>
     </table>
 
 <br>
 
 ## 2.4 LED
 
-#### RGB LED (DS10)
+### 2.4.1 RGB LED (DS10)
 <table style="width: 40%">
        <colgroup>
        <col span="1" style="width: 25%;">
@@ -194,7 +196,7 @@
 
 <br>
 
-#### Other LEDs
+### 2.4.2 Other LEDs
 
 <table style="width: 40%">
     <colgroup>
@@ -211,19 +213,19 @@
 
 ## 2.5 Switches
 
-#### Power-On switch(S1)
+### 2.5.1 Power-On switch(S1)
 
-Power On switch is used to Turn on/off the RG500Q Evaltion kit by pressing the push button `S1`.
+Power On switch is used to Turn on/off the RG500Q Evaluation kit by pressing the push button `S1`.
 
-#### Reset switch(S2)
+### 2.5.2 Reset switch(S2)
 
 Reset switch can be used to reset the module by pressing the push button `S2`. 
 
-#### USB Boot switch(S3-1)
+### 2.5.3 USB Boot switch(S3-1)
 
 USB Boot is used to force the module to enter emergency download mode by pulling up USB&#95;BOOT pin to VDD&#95;EXT through `S3.1`
 
-#### Auto Power-On(S3-2)
+### 2.5.4 Auto Power-On(S3-2)
 
 PON is an auto power on feature & the module can be turned on by pulling this pin high through `S3.2`
 

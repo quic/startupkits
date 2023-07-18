@@ -3,79 +3,155 @@
 
 ------------
 
-__7.1 Download Resources from CAF__
+This section guides with step by step procedure to setup build environment, upload sdk & toolchain, compilation and download images.
+
+## 7.1 Download SDK Manager 
+
 ```console
 cd /local/mnt/workspace/
-lftp -c 'mirror --parallel=100 https://mirrors.edge.kernel.org/caf_patches/external/startupkit/sc66/SC66-Relv1.1/ SC66 ;exit'
+wget --no-check-certificate https://git.codelinaro.org/clo/startup-kits/patches/-/raw/master/sc66/SC66-Relv2.0/sdk_manager.sh
 ```
 
-![N|Solid](../pics/SC66/sc66-lftp.jpg)
+![N|Solid](../pics/SC66/sc66-compilation-sdkmgr1.jpg)
 
-__7.2 Prepare SDK__
-```console
-ls
-mv sc66-qdn_relv1.0.zip SC66/
-mv SC66_Android10.0_Quectel_SDK_r008_20200604.tar.gz SC66/patches
-```
-![N|Solid](../pics/SC66/sc66-mv.jpg)
-
-__7.3 Updating Permissions to build scripts__
-```console
-cd SC66/
-chmod +x getsourceandbuild.sh
-```
-![N|Solid](../pics/SC66/sc66-chmod.jpg)
-
-__7.4 Build the source__
+## 7.2 Updating Permission
 
 ```console
-./getsourceandbuild.sh
+chmod +x sdk_manager.sh
 ```
-#####`ATTENTION!!!`
+![N|Solid](../pics/SC66/sc66-compilation-sdkmgr2.jpg)
+
+## 7.3 Build SDK
+
+- Run `sdk_manager.sh` to extract sdk & toolchain, apply patches and build all images
+- Select `1` for `Setup New Build` from the main menu. 
+
+```console
+./sdk_manager.sh
+```
+![N|Solid](../pics/SC66/sc66-compilation-sdkmgr3.jpg)
+
+## 7.4 Installing Packages
+
+`Attention!!!`
 ```warning
-- Download source code from open-source might take 4-6 hours.
-- Build Android might take 10-15 hours, depends on Linux machine configuration.
+Please verify the instructions and proceed with confirmation.
 ```
-![N|Solid](../pics/SC66/sc66-build.JPG)
 
-__7.5 Build Completed__
+![N|Solid](../pics/SC66/sc66-compilation-install-tools1.jpg)
+![N|Solid](../pics/SC66/sc66-compilation-install-tools2.jpg)
 
-![N|Solid](../pics/SC66/sc66-build-completed.jpg)
+## 7.5 Setup GIT
+
+![N|Solid](../pics/SC66/sc66-compilation-setup-git.jpg)
+
+## 7.6 Download CLO Resources
+
+![N|Solid](../pics/SC66/sc66-compilation-download-clo.jpg)
+
+## 7.7 Setup Folder Structure
+
 ```warning
-Repeat below instructions incase of failure
+Verification of SDK and other packages uploaded (Section 6.4) are part of this step,
+Please ensure necessary files are uploaded to linux machine or upload when it is instructed.
 ```
-```console
-cd /local/mnt/workspace/Android_SDK_SC66
-source build/envsetup.sh
-lunch sdm660_64-userdebug
-./build.sh dist -j8
+![N|Solid](../pics/SC66/sc66-compilation-setup-root.jpg)
 
+## 7.8 Setup QDN Patches
+
+![N|Solid](../pics/SC66/sc66-compilation-setup-qdn-patches.jpg)
+
+## 7.9 Setup SDK
+
+`Attention!!!`
+```warning
+This step may take few hours to complete, Downloading ~57GB of data from CLO.
 ```
-__7.6 Download Images from Linux Machine to Windows Machine using SFTP__
+
+![N|Solid](../pics/SC66/sc66-compilation-setup-sdk1.jpg)
+![N|Solid](../pics/SC66/sc66-compilation-setup-sdk2.jpg)
+
+### 7.9.1 Setup SDK Failure
+
+This section guides with procedure to recover from failure using retry mechanism, incase of SDK setup failure due to reasons such as repo initialization failures, repo download failures, partial downloads and network issues. Recommendation for such events are retrying the SDK setup instructions as prompted by the `sdkmanager.sh` .
+
+![N|Solid](../pics/SC66/sc66-compilation-retry-repo.jpg)
+
+## 7.10 Applying Patches1
+
+![N|Solid](../pics/SC66/sc66-compilation-apply-patches1-start.jpg)
+![N|Solid](../pics/SC66/sc66-compilation-apply-patches1-end.jpg)
+
+## 7.11 Applying Patches2
+
+![N|Solid](../pics/SC66/sc66-compilation-apply-patches2.jpg)
+
+## 7.12 Applying QDN Patches
+
+![N|Solid](../pics/SC66/sc66-compilation-apply-patches3-start.jpg)
+![N|Solid](../pics/SC66/sc66-compilation-apply-patches3-end.jpg)
+
+## 7.13 Build Images
+
+`Attention!!!`
+```warning
+This step may take few hours to complete
+```
+![N|Solid](../pics/SC66/sc66-compilation-build-all1.jpg)
+![N|Solid](../pics/SC66/sc66-compilation-build-all2.jpg)
+
+### 7.13.1 Build Failure
+
+This section guides with procedure to recover from failure using retry mechanism, incase of build failure due to reasons such as more number of threads created, some packages are not created in last iteration and missing images. Recommendation for such events are retrying the compilation/build steps as prompted by the `sdkmanager.sh` . To debug further, use logs available in the Build Directory(for eg. `/local/mnt/workspace/SC66/`) .
+
+![N|Solid](../pics/SC66/sc66-compilation-retry-build.jpg)
+
+## 7.14 Finish Setup
+
+-	Enter `y` for Finishing Build Setup.	
+
+![N|Solid](../pics/SC66/sc66-compilation-finish-build.jpg)
+
+__Note:__ Select `100` for quit the build script `Quit` from the main menu. 
+
+## 7.15 Download Built Images
+
+Download built images from linux machine to windows machine using SFTP
+
 ```code
-From: /local/mnt/workspace/SC66/Android_sc66/out/target/product/sdm660/
-To   : C:\SC66\SW\Built_images
+From  : /local/mnt/workspace/SC66/Android_SDK_SC66/bin/SC66.zip (Linux)
+To    : C:\SC66\SW\Built_Images (Windows)
+```
+__`SC66.zip Contents`__
+<table class="pinout" style="width:60%">
+<tr><th style="width:10%">Sl No</th><th style="width:30%">File Name</th><th style="width:20%">Description</th></tr>
+<tr><td>1</td><td>boot.img</td><td>Boot Image</td></tr>
+<tr><td>2</td><td>super.img</td><td>Super Image</td></tr>
+<tr><td>3</td><td>userdata.img</td><td>Userdata Image</td></tr>
+<tr><td>4</td><td>vbmeta.img</td><td>Vendor Image</td></tr>
+<tr><td>5</td><td>vbmeta_system.img</td><td>Vendor Image</td></tr>
+<tr><td>6</td><td>dtbo.img</td><td>dtbo Image</td></tr>
+<tr><td>7</td><td>abl.elf</td><td>Bootloader Image</td></tr>
+<tr><td>8</td><td>load.bat</td><td>Flashing Script</td></tr>
+</table><br>
+
+```warning
+Use MobaXterm UI to download images from ubuntu
+  - Select the files, drag and drop to desired folder
 ```
 
-__`List of Images`__
-<table class="pinout">
-<tr><td>boot</td><td>boot.img</td></tr>
-<tr><td>super</td><td>super.img</td></tr>
-<tr><td>userdata</td><td>userdata.img</td></tr>
-<tr><td>vemeta</td><td>vemeta.img</td></tr>
-<tr><td>vmeta_system</td><td>vemeta_system.img</td></tr>
-<tr><td>abl</td><td>abl.elf</td></tr>
-<tr><td>dtbo</td><td>dtbo.img</td></tr>
-</table>
-<br>
+![N|Solid](../pics/SC66/sc66-compilation-image-download.jpg)
 
-__7.7 Use MobaXterm UI to download images from ubuntu__
-  - Select the files, drag and drop to desired folder
-  - Total 7 files, select all 7(use Ctrl key to select) and download
+## 7.16 Rebuilding Images (_Optional Step_)
 
-![N|Solid](../pics/SC66/sc66-download.jpg)
+This section demonstrates, The procedure to rebuild the images in events such as enabling additional features, modifying Bootloader/Kernel/System/Userdata/Vendor images, adding/removing some patches, addition of a new applications and modifying the DTSI.
 
-__7.8 Compilation completed, Proceed with Flashing__
-  - Downloaded Images are now available in `C:\SC66\Built_Images`
+1. Run the `./sdk_manager.sh`  in linux server.
+2. Select `3` option  for `Make All`
+3. Select `5` option for `Prepare Final Images`
 
-------------
+![N|Solid](../pics/SC66/sc66-compilation-makeallimages-begin.jpg)
+![N|Solid](../pics/SC66/sc66-compilation-makeallimages-end.jpg)
+![N|Solid](../pics/SC66/sc66-compilation-preparefinalimg.jpg)
+
+--------------------

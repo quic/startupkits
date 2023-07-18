@@ -30,9 +30,10 @@
 ![N|Solid](../pics/SC66/sc66-block-diagram.jpg =1100x640)
 
 
-## 2.3 Peripheral Interface
+## 2.3 Connectors
 
-#### Peripheral Connector 1 (J13) 
+### 2.3.1 Peripheral Connector 1 (J13)
+
 <table style="width: 40%">
     <colgroup>
        <col span="1" style="width: 40%;">
@@ -56,7 +57,7 @@
 
 <br>
 
-#### Peripheral Connector 2 (J14) 
+### 2.3.2 Peripheral Connector 2 (J14)
 <table style="width: 40%">
     <colgroup>
        <col span="1" style="width: 40%;">
@@ -69,11 +70,11 @@
 <tr><td>GPIO 77</td><td>5</td><td>6</td><td>GPIO 72</td></tr>
 <tr><td>GPIO 71</td><td>7</td><td>8</td><td>GPIO 68</td></tr>
 <tr><td>GPIO 69</td><td>9</td><td>10</td><td>GPIO 70</td></tr>
-<tr><td>VIB GPIO</td><td>11</td><td>12</td><td>VOL (+)</td></tr>
+<tr><td>GPIO 34</td><td>11</td><td>12</td><td>VOL (+)</td></tr>
 <tr><td>ADC1</td><td>13</td><td>14</td><td>VOL (-)</td></tr>
-<tr><td>ADC2</td><td>15</td><td>16</td><td>NC</td></tr>
-<tr><td>3.8V~4.2V</td><td>17</td><td>18</td><td>NC</td></tr>
-<tr><td>3.8V~4.2V</td><td>19</td><td>20</td><td>NC</td></tr>
+<tr><td>ADC2</td><td>15</td><td>16</td><td>RESERVED</td></tr>
+<tr><td>3.8V~4.2V</td><td>17</td><td>18</td><td>RESERVED</td></tr>
+<tr><td>3.8V~4.2V</td><td>19</td><td>20</td><td>RESERVED</td></tr>
 <tr><td>1.8V</td><td>21</td><td>22</td><td>GND</td></tr>
 <tr><td>3.3V</td><td>23</td><td>24</td><td>GND</td></tr>
 </table>

@@ -11,11 +11,11 @@ Step by step procedure for testing peripherals is explained below.
  - Example 6 : RTC
  - Example 7 : ADC
 
-__10.1 Example&#95;uart Application:__
+## 10.1 Example&#95;uart Application:
 
 This is an example code for UARTs. The example application will send test messages to all three UART interfaces at one second interval. Also, any data coming to receive lines are captured and displayed. 
 
-__BG96 UART:__
+### 10.1.1 BG96 UART:
 <table class="pinout">
 <tr><th>UART no</th><th>Signal</th><th>On Dev-Kit</th><th>BG96 Pin #</th></tr>
 <tr><td rowspan="2">UART1</td><td>TXD</td><td>J8.5</td><td>35</td></tr>
@@ -41,13 +41,13 @@ __Steps to setup Dev-kit & serial port__
      ![N|Solid](../pics/BG96/UART2.jpg)<br>
      ![N|Solid](../pics/BG96/UART3.jpg)<br>
 
-__10.2 Example&#95;I2C Application:__
+## 10.2 Example&#95;I2C Application:
 
 This is an example code for I2C. This example code reads/writes from/to a register of MAG3110 Magnetometer sensor. Any I2C sensor can be integrated to the BG96 board. Based on the sensor chip, need to modify the slave address and register address in the example code. 
 
-###`Note: I2C read/write procedures are different from some manufacturers. Hence also need to modify i2c read() and i2c write() functions as it is`
+__Note:__ I2C read/write procedures are different from some manufacturers. Hence also need to modify i2c read() and i2c write() functions as it is
 
-__BG96 I2C:__
+### 10.2.1 BG96 I2C:
 <table class="pinout">
 <tr><th>I2C signals</th><th>On Dev-Kit</th><th>BG96 Pin #</th></tr>
 <tr><td>SCL</td><td>J8.7</td><td>40</td></tr>
@@ -68,12 +68,13 @@ __Steps to setup Dev-kit & serial port__
 
 ![N|Solid](../pics/BG96/bg96-i2c.jpg)
 
-__10.3 Example&#95;SPI Application:__
+## 10.3 Example&#95;SPI Application:
 
 This is an example code for SPI. This example code reads/writes from/to a register of LIS3DL Magnetometer sensor. 
 Any SPI sensor can be integrated to the BG96 board. Based on the sensor chip, need to modify register address in the example code. 
 
-`Note: SPI read/write procedures are different from some manufacturers. Hence also need to modify spi_read() and spi_write() functions as it is.`<br>
+__Note:__ SPI read/write procedures are different from some manufacturers. Hence also need to modify spi_read() and spi_write() functions as it is.<br>
+
 __Steps to setup Dev-kit & serial port__
 - Connect an SPI based sensor to the SPI1 pins of BG96 board
 - Go to SPI example code directory (..quectel/example/spi/src), Open example&#95;spi.c file. Configure the register address (line number 28). Save the file. Changes are shown below for reference
@@ -87,14 +88,15 @@ __Steps to setup Dev-kit & serial port__
 ![N|Solid](../pics/BG96/bg96-spi.jpg)
 
 
-__10.4 Example&#95;GPIO&#95;input&#95;Application:__
+## 10.4 Example&#95;GPIO&#95;input&#95;Application:
 
 This is an example code for GPIO inputs. This example application generates a 500 mS in daisy chain format.By default, all GPIO's are in active high state.
 
 __Steps to setup EVK & serial port__
-Go to GPIO example code directory (../quectel/example/gpio/inc), Open example&#95;gpio.h file. Change GPIO&#95;TEST&#95;MODE macro definition to ‘0’ (input test mode, line number 17). Save the file. Changes are shown below for reference
+- Go to GPIO example code directory (../quectel/example/gpio/inc), Open example&#95;gpio.h file. Change GPIO&#95;TEST&#95;MODE macro definition to ‘0’ (input test mode, line number 17). Save the file. Changes are shown below for reference
 
- &#35;define GPIO&#95;TEST&#95;MODE   0	//1: test pin output; 0: test pin input;
+&#35;define GPIO&#95;TEST&#95;MODE   0	//1: test pin output; 0: test pin input;
+
 - Clean and build the GPIO example code. <a href="#" target="_blank" onclick="LoadPage(8);return false;">Refer section 8</a>
 - Flash the GPIO binary image (quectel&#95;demo&#95;gpio.bin and oem&#95;app&#95;path.ini). <a href="#" target="_blank" onclick="LoadPage(9);return false;">Refer section 9</a>
 - Restart the board.
@@ -103,15 +105,15 @@ Go to GPIO example code directory (../quectel/example/gpio/inc), Open example&#9
 ![N|Solid](../pics/BG96/bg96-gpio-i.jpg)
 
 
-__10.5 Example&#95;GPIO&#95;output&#95;Application:__
+## 10.5 Example&#95;GPIO&#95;output&#95;Application:
 
 This is an example code for GPIO outputs. This example application generates a 500 mS active low pulse on each GPIOs in daisy chain format. By default, all GPIOs are drive active high.
 
 __Steps to setup Dev-kit & serial port__
+- Go to GPIO example code directory (../quectel/example/gpio/inc), Open example&#95;gpio.h file. Change GPIO&#95;TEST&#95;MODE macro definition to ‘1’ (output test mode, line   number 17). Save the file. Changes are shown below for reference
 
-Go to GPIO example code directory (../quectel/example/gpio/inc), Open example&#95;gpio.h file. Change GPIO&#95;TEST&#95;MODE macro definition to ‘1’ (output test mode, line number 17). Save the file. Changes are shown below for reference
+&#35;define GPIO&#95;TEST&#95;MODE   1	//1: test pin output; 0: test pin input;
 
- &#35;define GPIO&#95;TEST&#95;MODE   1	//1: test pin output; 0: test pin input;
 - Clean and build the GPIO example code. <a href="#" target="_blank" onclick="LoadPage(8);return false;">Refer section 8</a>
 - Flash the GPIO binary image (quectel&#95;demo&#95;gpio.bin and oem&#95;app&#95;path.ini). <a href="#" target="_blank" onclick="LoadPage(9);return false;">Refer section 9</a>
 - Restart the board.
@@ -120,7 +122,7 @@ Go to GPIO example code directory (../quectel/example/gpio/inc), Open example&#9
 ![N|Solid](../pics/BG96/bg96-gpio-o.jpg)
 
 
-__10.6 Example&#95;RTC Application:__
+## 10.6 Example&#95;RTC Application:
 
 This is an example code for RTC. This example application set a defined time (19/11/11,15:14:06) and reads the time at one second interval.
 
@@ -130,11 +132,11 @@ This is an example code for RTC. This example application set a defined time (19
 - Connect UART2 to the PC using USB to serial converter, and open a terminal tool at baud rate 115200, Review the logs<br>
 ![N|Solid](../pics/BG96/bg96-rtc.jpg)<br>
 
-__10.7 Example&#95;ADC Application:__
+## 10.7 Example&#95;ADC Application:
 
 This is an example code for ADC input.  This example application reads ADC0 and ADC1 pins at one second interval. ADC reads in millivolt. 
 
-`Note: Maximum ADC input voltage is 1800mv. Please make sure that the ADC input voltage is not more than 1800mv.`
+__Note:__ Maximum ADC input voltage is 1800mv. Please make sure that the ADC input voltage is not more than 1800mv.
 
 - Clean and build adc&#95;pipe example code. <a href="#" target="_blank" onclick="LoadPage(8);return false;">Refer section 8</a>
 - Flash the ADC binary image (quectel&#95;demo&#95;adc.bin and oem&#95;app&#95;path.ini). <a href="#" target="_blank" onclick="LoadPage(9);return false;">Refer section 9</a>

@@ -27,9 +27,9 @@
 ![N|Solid](../pics/SC20/sc20-block-diagram.jpg)
 
 
-## 2.3 Peripheral Interface
+## 2.3 Connectors
 
-#### Peripheral Connector 1 (P4) 
+### 2.3.1 Peripheral Connector 1 (P4) 
 
 <table style="width: 40%">
     <colgroup>
@@ -41,20 +41,20 @@
 <tr><td>3.3V</td><td>1</td><td>2</td><td>GND</td></tr>
 <tr><td>GPIO 92</td><td>3</td><td>4</td><td>SPI CLK</td></tr>
 <tr><td>GPIO 16</td><td>5</td><td>6</td><td>SPI CS</td></tr>
-<tr><td>GPIO 17</td><td>7</td><td>8</td><td>I2C SCL</td></tr>
-<tr><td>GPIO 69</td><td>9</td><td>10</td><td>I2C SDA</td></tr>
-<tr><td>GPIO 23</td><td>11</td><td>12</td><td>SPI MISO</td></tr>
-<tr><td>GPIO 68</td><td>13</td><td>14</td><td>SPI MOSI</td></tr>
-<tr><td>GPIO 97</td><td>15</td><td>16</td><td>UART1 TX</td></tr>
-<tr><td>GPIO 98</td><td>17</td><td>18</td><td>UART1 RX</td></tr>
-<tr><td>PWR KEY</td><td>19</td><td>20</td><td>ADC</td></tr>
+<tr><td>GPIO 17</td><td>7</td><td>8</td><td>SPI MISO</td></tr>
+<tr><td>GPIO 69</td><td>9</td><td>10</td><td>SPI MOSI</td></tr>
+<tr><td>GPIO 23</td><td>11</td><td>12</td><td>I2C2 SDA</td></tr>
+<tr><td>GPIO 68</td><td>13</td><td>14</td><td>I2C2 SCL</td></tr>
+<tr><td>GPIO 97</td><td>15</td><td>16</td><td>UART1 RX</td></tr>
+<tr><td>GPIO 98</td><td>17</td><td>18</td><td>UART1 TX</td></tr>
+<tr><td>PWR KEY</td><td>19</td><td>20</td><td>ADC (0-1.7V)</td></tr>
 <tr><td>1.8V</td><td>21</td><td>22</td><td>RESET</td></tr>
 <tr><td>3.3V</td><td>23</td><td>24</td><td>GND</td></tr>
 </table>
 
 <br>
 
-#### Peripheral Connector 2 (P5) 
+### 2.3.2 Peripheral Connector 2 (P5) 
 <table style="width: 40%">
     <colgroup>
        <col span="1" style="width: 40%;">
@@ -66,8 +66,8 @@
 <tr><td>1.8V</td><td>3</td><td>4</td><td>GPIO 89</td></tr>
 <tr><td>VOL (+)</td><td>5</td><td>6</td><td>GPIO 94</td></tr>
 <tr><td>VOL (-)</td><td>7</td><td>8</td><td>GPIO 36</td></tr>
-<tr><td>I2C2 SDA</td><td>9</td><td>10</td><td>GPIO 65</td></tr>
-<tr><td>I2C2 SCL</td><td>11</td><td>12</td><td>GPIO 96</td></tr>
+<tr><td>I2C1 SDA</td><td>9</td><td>10</td><td>GPIO 65</td></tr>
+<tr><td>I2C1 SCL</td><td>11</td><td>12</td><td>GPIO 96</td></tr>
 <tr><td>VIB PWM</td><td>13</td><td>14</td><td>GND</td></tr>
 </table>
 

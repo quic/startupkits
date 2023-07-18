@@ -20,17 +20,16 @@
 <tr><td>Power Supply</td><td>5V DC</td></tr>
 <tr><td>Battery</td><td>3.7V, 3000mAh, Li-Po</td></tr>
 <tr><td>Board size</td><td>85mm x 65mm</td></tr>
-
 </table>
-
 <br>
 
 ## 2.2 Block Diagram
 
 ![N|Solid](../pics/EC25/ec25-block-diagram.jpg =1100x640)
 
-## 2.3 Peripheral Interface
-#### Peripheral Connector (P5)
+## 2.3 Connectors
+
+### 2.3.1 Peripheral Connector (P5)
 <!-- <table class="spec"> -->
 <table style="width: 40%">
     <colgroup>

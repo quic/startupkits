@@ -2,7 +2,7 @@
 
 ------------
 
-__6.1 Install Ubuntu 16.04 Server (Proceed with either Option1 or Option2)__
+## 6.1 Install Ubuntu 16.04 Server 
 
    - __Option1:__ Use two physical machines (Use a second physical machine to install ubuntu 16.04 server)
        - Download Ubuntu 16.04 Image [ubuntu-16.04.6-server-amd64.iso](http://old-releases.ubuntu.com/releases/16.04.5/ubuntu-16.04.6-server-amd64.iso) __(~900MB)__
@@ -20,7 +20,12 @@ __6.1 Install Ubuntu 16.04 Server (Proceed with either Option1 or Option2)__
            - `Important Step:` Use Guided - Use Entire Disk Option. [Click Here](https://ubuntu.com/tutorials/tutorial-install-ubuntu-server-1604#8-storage-configuration)
            - `Important Step:` Select OpenSSH server as part of installation. [Click here](https://ubuntu.com/tutorials/tutorial-install-ubuntu-server-1604#10-software-selection)
 
-__6.2 Mount Partitions, Create Folder Structure and Get _ip&#95;address_, _hostname_ & _username___
+```warning
+Proceed with either Option1 or Option2
+```
+## 6.2 Ubuntu Configuration
+
+This section guides how to mount partitions, create folder structure and get __ip&#95;address__, __hostname__ & __username__.
    - Execute below commands in terminal of ubuntu 16.04 server created in previous step
 ```console
 sudo mkdir /local/
@@ -29,67 +34,47 @@ sudo mkdir -p /local/mnt/workspace
 sudo chmod 777 /local/mnt/workspace/
 hostname; hostname -I
 ```
-![N|Solid](../pics/vm/sc20-ip-host.jpg)
+![N|Solid](../pics/Common/common-adv-instructions-ubuntu-setup.jpg)
 
-__6.3 Setup Enviorment to access ubuntu machine from Windows 10__
-
-   - Download and Install Mobaxterm ([MobaXterm_Installer_v20.1.zip](https://download.mobatek.net/2012020021813110/MobaXterm_Installer_v20.1.zip)) _Use default options to install_
-   - Create SSH sesstion in MobaXterm and save the session for future use
-   ![N|Solid](../pics/SC20/sc20-ssh.jpg)
-   - Create SFTP sesstion in MobaXterm and save the session for future use
-   ![N|Solid](../pics/SC20/sc20-sftp.jpg)
-
-__6.4 Upload SW Packages to Ubuntu__
-  - Start & Connect to SFTP explorer using MobaXterm
-  - Upload files using sftp session created in previous slide
-  
-```code
-  From : C:\SC20\SW\sc20-qdn_relv1.0.zip and C:SC20\SW\SC20_Android7.1.2_Quectel_SDK_r00049_20181106.tar.gz
-  To   : /local/mnt/workspace/
+```warning
+Remember the IP Address from the above session
 ```
-- ![N|Solid](../pics/SC20/sc20-upload.jpg)
+![N|Solid](../pics/Common/common-adv-instructions-view-host-details.jpg)
 
-__6.5 Login & Start Working on Linux Machine__
+## 6.3 Setup Environment to access Ubuntu Machine from Windows 10
+
+   - Download and Install MobaXterm ([MobaXterm&#95;Installer&#95;v23.1.zip](https://download.mobatek.net/2312023031823706/MobaXterm_Installer_v23.1.zip)) _Use default options to install_
+   - Create SSH session in MobaXterm and save the session for future use
+   ![N|Solid](../pics/SC20/sc20-adv-instructions-setup-ssh.jpg)
+   - Create SFTP session in MobaXterm and save the session for future use
+   ![N|Solid](../pics/SC20/sc20-adv-instructions-setup-sftp.jpg)
+
+## 6.4 Upload SDK to Linux Machine
+  - Connect to SFTP session using MobaXterm & proceed
+    - Use SFTP session created in previous step
+<table class="pinout" style="width: 100%">
+<tr><th style="width:10%">Sl No</th><th style="width:70%">File Name</th><th style="width:20%">Description</th></tr>
+<tr><td>1</td><td>SC20_Android7.1.2_Quectel_SDK_r00049_20181106.tar.gz</td><td>SDK</td></tr>
+<tr><td>2</td><td>sc20-qdn_relv1.0.zip</td><td>QDN Patches</td></tr>
+</table><br>
+
+![N|Solid](../pics/SC20/sc20-adv-instructions-sdk-upload.jpg)
+
+## 6.5 Connect to Linux Machine
   - Connect to SSH terminal using MobaXterm & proceed
-    - Use ssh session created in previous step
+    - Use SSH session created in previous step
 
+## 6.6 Linux Machine Version
 
-__6.6 Verify the linux machine version__
+-	Execute the below command in linux machine (SSH session) to verify the ubuntu linux-version.
 
 ```console
 lsb_release -a
 ```
 
-![N|Solid](../pics/SC20/sc20-shell1.jpg)
+![N|Solid](../pics/SC20/sc20-adv-instructions-view-linux-version.jpg)
 
-__6.7 Installing required packages__
 
-```console
-sudo apt-get update
-sudo apt-get install git-core gnupg lftp flex bison gperf build-essential zip curl zlib1g-dev libc6-dev lib32ncurses5-dev x11proto-core-dev libx11-dev lib32readline6-dev lib32z1-dev libgl1-mesa-dev g++-multilib mingw-w64 tofrodos python-markdown libxml2-utils xsltproc openjdk-8* phablet-tools bc
-```
-![N|Solid](../pics/SC20/sc20-shell2.jpg)
-##### `Notes:`
-```warning
-Run sudo apt-get update again incase of apt-get install failure.
-Provide ‘yes’ when prompt for additional  memory requirement.
-Might take few minutes to complete, wait for completion of package install.
-```
-
-__6.8 Configure git before use__
-
-```console
-
-git config --global user.name "SC20 Developer"
-git config --global user.email "myname@company.com"
-```
-![N|Solid](../pics/SC20/sc20-shell3.jpg)
-##### `Notes:`
-```warning
-Execute above git config commands as it is. Actual username and email not required
-```
-
-#### Setup Completed, Proceed with Compilation
-
+**Setup Completed, Proceed with Compilation**
 
 ------------

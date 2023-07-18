@@ -34,36 +34,47 @@ sudo mkdir -p /local/mnt/workspace
 sudo chmod 777 /local/mnt/workspace/
 hostname; hostname -I
 ```
-![N|Solid](../pics/RG500Q/rg500q-ubuntu-setup.jpg)
+![N|Solid](../pics/Common/common-adv-instructions-ubuntu-setup.jpg)
 
 ```warning
 Remember the IP Address from the above session
 ```
-![N|Solid](../pics/RG500Q/rg500q-ip-host.jpg)
+![N|Solid](../pics/Common/common-adv-instructions-view-host-details.jpg)
 
 ## 6.3 Setup Environment to access Ubuntu Machine from Windows 10
 
-   - Download and Install Mobaxterm ([MobaXterm_Installer_v20.1.zip](https://download.mobatek.net/2012020021813110/MobaXterm_Installer_v20.1.zip)) _Use default options to install_
+   - Download and Install MobaXterm ([MobaXterm&#95;Installer&#95;v23.1.zip](https://download.mobatek.net/2312023031823706/MobaXterm_Installer_v23.1.zip)) _Use default options to install_
    - Create SSH session in MobaXterm and save the session for future use
-   ![N|Solid](../pics/RG500Q/rg500q-ssh.jpg)
+   ![N|Solid](../pics/RG500Q/rg500q-adv-instructions-setup-ssh.jpg)
    - Create SFTP session in MobaXterm and save the session for future use
-   ![N|Solid](../pics/RG500Q/rg500q-sftp.jpg)
+   ![N|Solid](../pics/RG500Q/rg500q-adv-instructions-setup-sftp.jpg)
 
-## 6.4 Connect to Linux Machine
+## 6.4 Upload SDK to Linux Machine
+  - Connect to SFTP session using MobaXterm & proceed
+    - Use SFTP session created in previous step
+<table class="pinout" style="width: 100%">
+<tr><th style="width:10%">Sl No</th><th style="width:70%">File Name</th><th style="width:20%">Description</th></tr>
+<tr><td>1</td><td>ql-ol-extsdk.tar.gz</td><td>SDK</td></tr>
+<tr><td>2</td><td> RG500QEAAAR11A02M4G_OCPU_01.001.01.001-toolchain.tar.gz</td><td>Tool Chain</td></tr>
+</table><br>
+
+![N|Solid](../pics/RG500Q/rg500q-adv-instructions-sdk-upload.jpg)
+
+## 6.5 Connect to Linux Machine
   - Connect to SSH terminal using MobaXterm & proceed
-    - Use ssh session created in previous step
+    - Use SSH session created in previous step
 
-## 6.5 Linux Machine Version
+## 6.6 Linux Machine Version
 
--	Execute the below command in linux machine (ssh session) to verify the ubuntu linux-version.
+-	Execute the below command in linux machine (SSH session) to verify the ubuntu linux-version.
 
 ```console
 lsb_release -a
 ```
 
-![N|Solid](../pics/RG500Q/rg500q-linux-version.jpg)
+![N|Solid](../pics/RG500Q/rg500q-adv-instructions-view-linux-version.jpg)
 
 
-##### Setup Completed, Proceed with Compilation
+**Setup Completed, Proceed with Compilation**
 
 ------------

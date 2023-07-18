@@ -1,6 +1,7 @@
- 6. Device Setup Instructions
+# 6. Device Setup Instructions
+
 ------------
-__6.1 Power up device__
+## 6.1 Power up device
 
 - Power-up the dev-kit with provided power adapter (or) battery & check the device detection in the COM ports of device manger as shown below.<br> 
 
@@ -22,14 +23,14 @@ __6.1 Power up device__
                   <td>Quectel USB NMEA Port</td>
                   <td>COM Port for collecting location information</td>
                </tr>
-               </table>
+               </table><br>
                
-__6.2 Connect USB to TTL serial adapter to dev-kit__
+## 6.2 Connect USB to TTL serial adapter to dev-kit
 
    - Connect debug-UART port to USB to TTL serial adapter to below mentioned pins through jumper wires to view debug logs
    - Debug UART pinouts
 <table class="pinout">
-<tr><th>UART no</th><th>Signal</th><th>On Dev-Kit</th><th>BG96 Pin #</th></tr>
+<tr><th>UART no</th><th>Signal</th><th>On Dev-Kit</th><th>BG96 Pin</th></tr>
 <tr><td rowspan="2">UART2</td><td>TXD</td><td>J9.2</td><td>23</td></tr>
 <tr><td>RXD</td><td>J9.19</td><td>22</td></tr>
 </table><br>
@@ -37,7 +38,7 @@ __6.2 Connect USB to TTL serial adapter to dev-kit__
 - <a href="https://5.imimg.com/data5/XL/VE/MY-1833510/ft232rl-usb-to-ttl-5v-3-3v-convertor.pdf"target="_blank">USB to TTL </a> pin outs<br>
 ![N|Solid](../pics/BG96/bg96-usb-ttl.jpg)
 
-`Note: Ensure jumper is towards 3.3V side on USB to TTL serial adapter `
+__Note:__ Ensure jumper is towards 3.3V side on USB to TTL serial adapter
 - Check for the COM ports in device manager & teraterm for serial port detection<br>
 ![N|Solid](../pics/BG96/bg96-serialport.jpg)<br>
 <table class=pinout>
@@ -47,7 +48,7 @@ __6.2 Connect USB to TTL serial adapter to dev-kit__
                </tr>
                <tr>
                   <td>USB Serial port</td>
-                  <td>COM Port for USB to Serial convertor</td> 
+                  <td>COM Port for USB to Serial Converter</td>
                </tr>
                </table>
                
@@ -57,13 +58,14 @@ __6.2 Connect USB to TTL serial adapter to dev-kit__
 - Enter AT in Teraterm to get the response from the dev-kit as shown below<br>
 ![N|Solid](../pics/BG96/bg96-teraterm.jpg)
 
-__6.3 Set up QFOLGS method(optinal method)__
-####`Attention!!`
+## 6.3 Set up QFOLGS method(optional method)
+`Attention!!!`
+
 ```warning
 Below QFLOG procedure is to setup command line interface for serial port monitoring,
 its optional and not a mandatory procedure to follow but instead any serial port softwares can be used example(Teraterm,putty ..etc).
 ```
-__6.3.1 Setting up of CLI__
+### 6.3.1 Setting up of CLI
    - Copy the downloaded python 3.6.1 software into c drive
       `c:\Python 3.6.1`    
 - <a href="https://www.howtogeek.com/197947/how-to-install-python-on-windows/"target="_blank"> Set up </a> Python 3.6.1 by following steps in the link.
@@ -77,21 +79,27 @@ __6.3.1 Setting up of CLI__
         - Go to Computer -> Properties -> Advanced System Settings<br> 
         - Click Environment Variables<br>
         - Create the PYTHONPATH system environment variable if it isnot already set<br>
-        - Add the below QFLOG path to the already created variable name`PYTHONPATH` system environmentvariable<br>
-         (`C:\BG96\SW\BG96MAR04A02M1G_01.002.01.002\sdk\Quectel_BG96_QuecOpen_SDK_Package_V4.2.4\QFLOG\src`) to the PYTHONPATH environment variable
+        - Add the below QFLOG path to the already created variable name`PYTHONPATH` system environment variable<br>
+         (`C:\BG96\SW\BG96MAR04A02M1G_01.002.01.002\SDK\Quectel_BG96_QuecOpen_SDK_Package_V4.2.4\QFLOG\src`) to the PYTHONPATH environment variable
 
-   __6.3.2 Enable QFLOG__
-    - QFLOG function is provided for logging of the QuecOpen user application. QFLOG is disabled on BG96 by default. Use the below AT commands to enable this function
-     - `AT+QCFGEXT=qflogport,1`
-     - `AT+QCFGEXT=qflogen,1`<br>
-   ![N|Solid](../pics/BG96/bg96-QFLOG-enable.jpg)<br>
+### 6.3.2 Enable QFLOG
 
-  ####`Attention!!` 
-     ```warning
-     Reset the module after executing these two AT commands
-     Use "USB AT PORT" in python script.`
-     ```  
-__6.3.3 Executing the CLI__
+QFLOG function is provided for logging of the QuecOpen user application. QFLOG is disabled on BG96 by default. Use the below AT commands to enable this function
+ ```console
+ AT+QCFGEXT=qflogport,1
+ AT+QCFGEXT=qflogen,1
+ ```
+
+![N|Solid](../pics/BG96/bg96-QFLOG-enable.jpg)<br>
+
+  `Attention!!!`
+
+```warning
+Reset the module after executing these two AT commands
+Use "USB AT PORT" in python script.`
+```
+
+### 6.3.3 Executing the CLI
   - First send a "HELLO" command to check the connectivity. 
   - QFLOG.py -p HELLO<br> 
 If communication is successful, the following response is received:<br>
@@ -101,7 +109,7 @@ If communication is successful, the following response is received:<br>
  QFLOG.py -p COM14 -h<br>
 ![N|Solid](../pics/BG96/bg96-QFLOG-MSG-test.jpg)
 
-__6.3.4 Logging__
+### 6.3.4 Logging
   - Logging function can be enabled in the QuecOpen application with below operation.
    - Include qflog_utils.h file. 
                The below statement is to be used for logging a message. 
@@ -110,7 +118,6 @@ __6.3.4 Logging__
    - Please ensure to run the python script with the following command to receive logs. In the console. 
      -    QFLOG.py -p VIEW&#95;LOGS
 - A session can be terminated by sending Ctrl + C.
-
 
 ------------
 

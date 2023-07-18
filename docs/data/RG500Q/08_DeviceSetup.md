@@ -1,4 +1,4 @@
-## 8 Device Setup Instructions
+# 8 Device Setup Instructions
 
 ------------
 This section guides with step by step instruction to configure device, configure the serial terminals and powering up the RG500Q evaluation board.
@@ -6,25 +6,25 @@ This section guides with step by step instruction to configure device, configure
 ## 8.1 Power On RG500Q evaluation board
 
 Follow the steps below to power up the device
--   Connect the device with battery(__J3__) or 5V/12V DC power adaptor(__J4__) to respective connectors.
+-   Connect the device with battery(__J3__) or 5V/12V DC power adapter(__J4__) to respective connectors.
 -   Press the power Key (__S1__) to power on the device.
 -   Connect the USB Type-C cable between RG500Q evaluation board's usb connector(__J16__) and the windows laptop.
 
-## 8.2 Connect USB to Serial Convertor
+## 8.2 Connect USB to Serial Converter
 
-Follow the below steps to connect <a href="https://robokits.co.in/arduino/motor-control-boards/interface-boards/ft232rl-ftdi-usb-to-ttl-serial-adapter-module?gclid=EAIaIQobChMI4oLIlcPk6AIV1RyPCh02iQBqEAYYASABEgJU2fD_BwE" target="_blank"> USB to Serial</a> Convertor to a windows laptop.
--   Use USB Cable to connect between USB to Serial convertor and windows laptop.
--   Familiarise with the USB to Serial Convertor
+Follow the below steps to connect <a href="https://robokits.co.in/arduino/motor-control-boards/interface-boards/ft232rl-ftdi-usb-to-ttl-serial-adapter-module?gclid=EAIaIQobChMI4oLIlcPk6AIV1RyPCh02iQBqEAYYASABEgJU2fD_BwE" target="_blank"> USB to Serial</a> Converter to a windows laptop.
+-   Use USB Cable to connect between USB to Serial Converter and windows laptop.
+-   Familiarize with the USB to Serial Converter
 
-![N|Solid](../pics/RG500Q/rg500q-usb-to-serial.jpg)
+![N|Solid](../pics/RG500Q/rg500q-device-setup-usb-to-serial.jpg)
 
-__Note:__ _USB to Serial Convertor must operate in 3.3V, jumper configuration is required to select 3.3V_
+__Note:__ _USB to Serial Converter must operate in 3.3V, jumper configuration is required to select 3.3V_
 
-## 8.3 Check USB Devices
+### 8.2.1 Check USB Devices
 
 Follow the steps to verify the device using device manager, verify all the ports highlighted in the screen shot and listed in the table below.
 
- ![N|Solid](../pics/RG500Q/rg500q-usb-ports.jpg)
+ ![N|Solid](../pics/RG500Q/rg500q-device-setup-list-usb-ports.jpg)
 
 <table style="width: 80%">
         <colgroup>
@@ -37,12 +37,12 @@ Follow the steps to verify the device using device manager, verify all the ports
     <tr><td>Quectel USB NMEA Port</td><td>COM Port for collecting location information</td></tr>
     <tr><td>Quectel USB Modem </td><td>Modem device for connecting to internet(USB RMNET)</td></tr>
     <tr><td>ADB Interface</td><td>USB debug interface</td></tr>
-    <tr><td>USB Serial port</td><td>COM Port for USB to Serial convertor</td></tr>
+    <tr><td>USB Serial port</td><td>COM Port for USB to Serial Converter</td></tr>
     </table>
 
  __Note:__ _ADB need to be enabled for detection, instructions are shared in the following sections._
 
-## 8.4 Setup Serial Terminal
+### 8.2.2 Setup Serial Terminal
 
 This section guides how to setup Tera Term to access serial terminal in a windows laptop. Tera Term can be connected to various serial terminals of the RG500Q evaluation board mentioned in the table below.
 -   Launch Tera Term from the location `C:\RG500Q\Tools\teraterm-4.105.exe`.
@@ -61,21 +61,21 @@ This section guides how to setup Tera Term to access serial terminal in a window
 
 -   Select desired serial port _(For eg. select AT port)_
 
- ![N|Solid](../pics/RG500Q/rg500q-at-port.jpg)
+ ![N|Solid](../pics/RG500Q/rg500q-device-setup-teraterm-atport-setup1.jpg)
 
 -   Configure baud rate _(For eg. `115200`)_
 
- ![N|Solid](../pics/RG500Q/rg500q-baud-rate.jpg)
+ ![N|Solid](../pics/RG500Q/rg500q-device-setup-teraterm-atport-setup2.jpg)
 
  -  Send messages using serial terminal _(For eg `AT`)_
 
- ![N|Solid](../pics/RG500Q/rg500q-simple-at.jpg)
+ ![N|Solid](../pics/RG500Q/rg500q-device-setup-simple-at.jpg)
 
-## 8.5 Accessing Device
+## 8.3 Accessing Device
 
-This section guides with step by step instruction to access RG500Q evaluation board using AT commands, Debug UART and ADB interface over USB. This section also familiarises with NMEA port used for location services.
+This section guides with step by step instruction to access RG500Q evaluation board using AT commands, Debug UART and ADB interface over USB. This section also familiarizes with NMEA port used for location services.
 
-### 8.5.1 AT Commands
+### 8.3.1 AT Commands
 
 This section demonstrates procedure for connecting to AT port, to control various operations of the RG500Q evaluation board. All instructions and screenshots are provided below.
 -   Launch Tera Term, select AT port and configure baud rate `115200`
@@ -84,12 +84,12 @@ This section demonstrates procedure for connecting to AT port, to control variou
  AT
 ```
 
-![N|Solid](../pics/RG500Q/rg500q-simple-at.jpg)
+![N|Solid](../pics/RG500Q/rg500q-device-setup-simple-at.jpg)
 
-### 8.5.2 Debug UART
+### 8.3.2 Debug UART
 
 This section demonstrates procedure for connecting to debug uart, to view the debug messages and login to the linux terminal for debugging. All instructions and screenshots are provided below.
-#### Pinouts
+#### 8.3.2.1 Pinouts
 
 <table style="width: 40%">
         <colgroup>
@@ -101,13 +101,13 @@ This section demonstrates procedure for connecting to debug uart, to view the de
     <tr><td>J29.3</td><td>Gnd</td></tr>
     </table>
 
--   Connect Tx-Rx, Rx-Tx & GND-GND to respective pins of USB to Serial Convertor
--   Launch Tera Term, select USB to Serial convertor port and configure baud rate `115200`
+-   Connect Tx-Rx, Rx-Tx & GND-GND to respective pins of USB to Serial Converter
+-   Launch Tera Term, select USB to Serial Converter port and configure baud rate `115200`
 
-![N|Solid](../pics/RG500Q/rg500q-usb-serial.jpg)
+![N|Solid](../pics/RG500Q/rg500q-device-setup-teraterm-usbserial-setup1.jpg)
 -   _(Optional)_ User can login to linux terminal after the initial bootup logs
 
-![N|Solid](../pics/RG500Q/rg500q-adb-shell-uart.jpg)
+![N|Solid](../pics/RG500Q/rg500q-device-setup-teraterm-serial-debug.jpg)
 
 ```warning
 -   To access this shell, user need to enable key from Quectel
@@ -119,25 +119,25 @@ Step 2 : Share the key “QADBKEY: XXXXXXXX “ of every board with Quectel
 Step 3 : Quectel will share the ADB login password for every board
 ```
 
-### 8.5.3 ADB over USB
+## 8.4 ADB over USB
 
 This section demonstrates the procedure to access ADB interface using windows command prompt for debugging with RG500Q evaluation board. ADB interface can be used to debug, access linux terminal, read/write files to device, execution of applications/commands and view debug messages. All instructions and screenshots are provided below.
 
-##### 1. Check ADB Devices
+### 8.4.1 Check ADB Devices
 
 ```console
 adb devices
 ```
- ![N|Solid](../pics/RG500Q/rg500q-adb-devices.jpg)
+ ![N|Solid](../pics/RG500Q/rg500q-device-setup-adb-devices.jpg)
 
-##### 2. Login to the shell
+### 8.4.2 Login to the shell
 
 ```console
 adb shell
 ```
- ![N|Solid](../pics/RG500Q/rg500q-adb-shell.jpg)
+ ![N|Solid](../pics/RG500Q/rg500q-device-setup-adb-shell.jpg)
 
-##### 3. Enable ADB _(Optional Step - ADB Not Detected)_
+### 8.4.3 Enable ADB _(Optional Step - ADB Not Detected)_
 
 -   This step is required only once, after firmware update using emergency download procedure.
 -   Launch Tera Term, select AT port and configure baud rate `115200`.
@@ -149,14 +149,14 @@ AT+QCFG="usbcfg",0x2C7C,0x0800,1,1,1,1,1,1
 AT+CFUN=1,1
 ```
 
-![N|Solid](../pics/RG500Q/rg500q-AT-port-commads.jpg)
+![N|Solid](../pics/RG500Q/rg500q-device-setup-enable-adb-atcommands.jpg)
 
 ```warning
 -   Device will restart after enabling ADB using above step
 -   Check ADB detection; use first two steps.
 ```
 
-### 8.5.4 Fastboot  _(Optional)_
+## 8.5 Fastboot  _(Optional)_
 
 This section guides to access fastboot interface using windows command prompt for flashing and upgrading activities of RG500Q evaluation board in development phase. All instructions and screenshots are provided below.
 -   Use __adb__ to reboot the device in fastboot mode
@@ -180,10 +180,10 @@ fastboot reboot
 ```console
 adb devices
 ```
-![N|Solid](../pics/RG500Q/rg500q-fastboot-demo.jpg)
+![N|Solid](../pics/RG500Q/rg500q-device-setup-fastboot-demo.jpg)
 
 
-### 8.5.5 NMEA Port _(Optional)_
+## 8.6 NMEA Port _(Optional)_
 
 This section demonstrates procedure for connecting to NMEA port, to view the location service messages from the RG500Q evaluation board. All instructions and screenshots are provided below.
 
@@ -191,22 +191,22 @@ This section demonstrates procedure for connecting to NMEA port, to view the loc
 -   Wait for messages to get the location services details.
 -	More information Refer 12.6 _GNSS_ section in DemoApps_Connectivity session.
 
-![N|Solid](../pics/RG500Q/rg500q-nema-demo.jpg)
+![N|Solid](../pics/RG500Q/rg500q-device-setup-nmea-demo.jpg)
 
 ------------
 
-## 8.6 AT Commands(UART)
+## 8.7 AT Commands(UART)
 
 This section demonstrates, how to use AT Command functionality over serial port using RG500Q evaluation board using its uart pins available in peripheral connector. This demo requires AT Command Firmware for the RG500Q evaluation board and flash the binary using emergency download procedure.
 
-##### AT Command Firmware
+### 8.7.1 AT Command Firmware
 -   Use the following binary received from Quectel .
 -   Extract the `RG500QEAAAR11A02M4G_01.001.01.001` AT Firmware and flash using emergency download procedure.<a href="#" target="_blank" onclick="LoadPage(13);return false;">Click here for instructions</a>
 
 ```warning
 This UART is act like a AT port only with AT Binaries/Firmware.
 ```
-##### Pinout
+### 8.7.2 Pinout
 <table class="pinout">
 <tr><th>Signal</th><th>Pin</th></tr>
 <tr><td>Uart-TX</td><td>J28.8</td></tr>
@@ -215,11 +215,11 @@ This UART is act like a AT port only with AT Binaries/Firmware.
 <tr><td>Gnd</td><td>J28.2</td></tr>
 </table><br>
 
-##### Test AT Commands
+### 8.7.3 Test AT Commands
 
 This section demonstrates procedure for connecting to AT port using UART pins available in the peripheral connector. All instructions and screenshots are provided below.
 -   Connect USB to Serial Converter to respective Tx-Rx, Rx-Tx, RTS-RTS and Gnd pins of the RG500Q evaluation board mentioned in the above table.
--   Launch Tera Term, select USB to Serial Convertor port and configure the baud rate to `115200`
+-   Launch Tera Term, select USB to Serial Converter port and configure the baud rate to `115200`
 -   Send below AT Commands.
 
 ```console
@@ -227,6 +227,6 @@ This section demonstrates procedure for connecting to AT port using UART pins av
  AT+QGMR
  ```
 
- ![N|Solid](../pics/RG500Q/rg500q-demo-at-comands.jpg)
+ ![N|Solid](../pics/RG500Q/rg500q-device-setup-at-command-demo.jpg)
 
 ------------

@@ -2,39 +2,35 @@
 
 ------------
 
-__9.1 Load Images__
+## 9.1 Load Image (Fastboot)
 
-Load the Image using script and windows command prompt
+This section guides how to flash generated images using `load.bat` in fastboot mode.
+
+-  Execute below commands in windows command prompt.
+
 ```console
-cd c:\EC25\SW\Built_Images
+cd c:\EC25\SW\Built_images
+tar -xf EC25.zip
 load.bat
 ```
-#### `Attention!!!`
+`Attention!!`
 ```warning
-- Disconnect all adb devices from windows machine(eg: android devices, phones, other evk’s)
-- Connect only ONE EC25 device to PC and check with command “adb devices” is detected
-- Install adb & fastboot drivers if required.
-- Press PWR-KEY switch SW1(at back side of dev-kit) to boot the device
-```
-![N|Solid](../pics/EC25/ec25-load1.jpg)
-
-```warning
-Please note, Press any key to 
-   - Continue flash images
-   - Continue to reboot device and boot normally
+Disconnect all adb devices from windows machine (eg: android devices, phones, other evk's)`
+Connect only ONE EC25 device to PC and check with command “adb devices” is detected`
 ```
 
-__Load Completed Sucessfully... Proceed with Device Setup!!!__<br><br>
+![N|Solid](../pics/EC25/ec25-flashing-flash-images.jpg)
 
-
-__9.2 Emergency Download using <a href="#" onclick="LoadPage(13);return false;">QFLash</a> (Optional)__
+**Load Completed**
 <br>
 
-__``Warning!!``__
+## 9.2 Optional Emergency Download _(QFlash)_
+
+`WARNING!! Please be sure before performing this procedure, Only for special use cases.`
 ```warning
-Please be sure before performing Emergency Download procedure, Only for special use cases
-```
    - Used to download for first time, Firmware Recovery & Factory downloading procedure
-   - Need to load the images again after recovery to get complete functionality
+   - Need to load the images again after recovery to get complete functionality.
+```
+<a href="#" target="_blank" onclick="LoadPage(13);return false;">Click here for instructions</a>
 
 ------------

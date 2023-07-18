@@ -6,7 +6,7 @@ Step by step procedure for testing connectivity peripherals is explained below.<
 - Example 2 : HTPP
 - Example 3 : MQTT
 
-__11.1 Example&#95;GNSS Application:__
+## 11.1 Example&#95;GNSS Application:
 
 __Steps to setup Dev-kit & serial port__
 - Connect GPS antenna to J6
@@ -18,7 +18,7 @@ __Steps to setup Dev-kit & serial port__
 ![N|Solid](../pics/BG96/bg96-gps.jpg)
 
 
-__11.2 Example&#95;HTTP Application:__
+## 11.2 Example&#95;HTTP Application:
 
 This is an example code for HTTP. This example application connects to an HTTP server (http://httpbin.org) and downloads an html file in to datatx directory of BG96 module.
 
@@ -26,7 +26,7 @@ __Steps to setup Dev-kit & serial port__
 
 - Connect a main antenna to J4 and insert a micro SIM to J1
 - Open the HTTP example code from below directory,
-C:\BG96\SW\Apps\BG96MAR04A02M1G_01.002.01.002\sdk\Quectel&#95;BG96&#95;QuecOpen&#95;SDK&#95;Package&#95;V4.2.4\SDK\quectel\example\http
+C:\BG96\SW\Apps\BG96MAR04A02M1G_01.002.01.002\SDK\Quectel&#95;BG96&#95;QuecOpen&#95;SDK&#95;Package&#95;V4.2.4\SDK\quectel\example\http
 - Configure the APN in the example&#95;http.c file, line number 43. Save the file. Changes are shown below for reference<br>
 &#35;define QL&#95;DEF&#95;APN	        "hologram"
 - Clean and build the HTTP example code. <a href="#" target="_blank" onclick="LoadPage(8);return false;">Refer section 8</a>
@@ -46,14 +46,14 @@ C:\BG96\SW\Apps\BG96MAR04A02M1G_01.002.01.002\sdk\Quectel&#95;BG96&#95;QuecOpen&
 ![N|Solid](../pics/BG96/bg96-HTTP-desk.jpg)<br>
 
 
-__11.3 Example&#95;MQTT Application:__
+## 11.3 Example&#95;MQTT Application:
 
 This is an example code for MQTT. This example application connects to MQTT client (broker.hivemq.com) and subscribe to the topic “hello_topic”. Also publish test messages to the same topic. 
 
 __Steps to setup Dev-kit & serial port__
 - Connect main antenna to J4 and insert micro SIM to J1.
 - Open the MQTT example code from below directory,
-C:\BG96\SW\Apps\BG96MAR04A02M1G_01.002.01.002\sdk\Quectel&#95;BG96&#95;QuecOpen&#95;SDK&#95;Package&#95;V4.2.4\SDK\quectel\example\mqtt
+C:\BG96\SW\Apps\BG96MAR04A02M1G_01.002.01.002\SDK\Quectel&#95;BG96&#95;QuecOpen&#95;SDK&#95;Package&#95;V4.2.4\SDK\quectel\example\mqtt
 - Configure the APN name in the example&#95;mqtt.c file, line number 43. Save the file. Changes are shown below for reference<br>
 &#35;define QL&#95;DEF&#95;APN	        "hologram" 
 - Clean and Build the MQTT example code. <a href="#" target="_blank" onclick="LoadPage(8);return false;">Refer section 8</a>

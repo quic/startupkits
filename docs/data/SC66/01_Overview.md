@@ -18,9 +18,9 @@ High-tier platform for advanced computing applications based on Snapdragon 600 s
 
   This tutorial provides detailed instruction's for on-boarding session using development kit and hands-on with applications.
 
-__References__
+References
 -   <a href="https://www.qualcomm.com/products/snapdragon-660-mobile-platform" target="_blank">Qualcomm Snapdragon 600 (SDM660)</a>
 -   <a href="https://www.quectel.com/product/lte-sc66-e-332-smart-module/" target="_blank">Quectel SC66 Smart Module</a>  _(<a href="https://www.quectel.com/wp-content/uploads/pdfupload/Quectel_SC66_Series_Smart_Module_Specification_V1.2.pdf" target="_blank">Specification</a>)_
--   <a href="https://developer.qualcomm.com/hardware/snapdragon-660-startup-kit" target="_blank">Qualcomm Developper Network</a>
+-   <a href="https://developer.qualcomm.com/hardware/snapdragon-660-startup-kit" target="_blank">Qualcomm Developer Network</a>
 
 ------------

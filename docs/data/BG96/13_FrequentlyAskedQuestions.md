@@ -7,12 +7,4 @@
    2. What is git? Is Git expertise required?
       <br><a href="https://en.wikipedia.org/wiki/Git" target="_blank">read here</a>, Git is Necessary for the setup. No expertise required; All necessary git  commands are provided in the instructions.
 
-<br>
-<br>
-<br>
-
 ------------
-
-<br>
-<br>
-<br>

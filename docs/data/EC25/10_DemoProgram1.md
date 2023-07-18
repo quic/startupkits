@@ -2,41 +2,50 @@
 
 ------------
 
+This section demonstrates the compilation procedure of demo applications and how to download,push & execute demo applications using EC25 evaluation board.To demonstrates the step by step procedure used `helloworld` demo application,All instructions and screenshots are provided below.
+
 ```warning
 Demo Applications have pre-loaded to the device, in /usrdata/
 ```
 
-__10.1 Compile Demo Application__
+## 10.1 Compile Demo Application
 
-Compilation procedure explained using `helloworld` application in the Linux Environment, Follow the below instructions to compile.
+This section explains compilation procedure using `helloworld` application in the Linux Environment, Follow the below instructions to compile.
 
 ```console
-cd /local/mnt/workspace/EC25_SDK/ql-ol-sdk/
+cd /local/mnt/workspace/EC25/Linux_SDK_EC25/
 . ql-ol-crosstool/ql-ol-crosstool-env-init
 cd ql-ol-extsdk/example/hello_world/
 make
 ```
 
-![N|Solid](../pics/EC25/ec25-ex-compilation.jpg)
+![N|Solid](../pics/EC25/ec25-demo1-helloworld-make.jpg)
 
-__10.2 Download Application__
+## 10.2 Download Demo Application
+
+-	Compiled `helloworld` demo application is available in below locations.
+
+```console
+/local/mnt/workspace/EC25/Linux_SDK_EC25/ql-ol-extsdk/example/hello_world
+```
 
 Use MobaXterm UI to download application binary from ubuntu
 
 ```code
-From :/local/mnt/workspace/EC25_SDK/ql-ol-sdk/ql-ol-extsdk/example/hello_world/ (Linux)
+From :/local/mnt/workspace/EC25/Linux_SDK_EC25/ql-ol-extsdk/example/hello_world (Linux)
 To   : C:\EC25\SW\Apps (Windows)
 ```
-![N|Solid](../pics/EC25/ec25-ex-app-download.jpg)
 
-__10.3 Load Application to Device__
+![N|Solid](../pics/EC25/ec25-demo1-helloworld-download.jpg)
+
+## 10.3 Push Application to Device
 
 Follow the below instructions to load the binaries to device using Windows Command Prompt
 
-####`Attention!!!`
+`Attention!!!`
 ```warning
 - Disconnect all adb devices from windows machine(eg: android devices, phones, other evk’s)
-- Power-up the EC25 Dev-kit by given adapter & Press SW1 (ON/OFF) at back side of dev-kit
+- Power-up the EC25 dev-kit by given adapter & Press SW1 (ON/OFF) at back side of dev-kit
 - Connect only ONE EC25 device to PC and check with command “adb devices” is detected
 - Install adb & fastboot drivers if required.
 ```
@@ -44,19 +53,20 @@ Follow the below instructions to load the binaries to device using Windows Comma
 cd C:\EC25\SW\Apps
 adb push helloworld /usrdata/
 ```
-![N|Solid](../pics/EC25/ec25-ex-adbpush.jpg)
+![N|Solid](../pics/EC25/ec25-demo1-helloworld-device-upload.jpg)
 
-__10.4 Execute Hello World Application__
+## 10.4 Execute Hello World Application
 
-Change permissions(execution) and execute the application in ADB Shell
+This section guides with change permissions(execution) and execute the application using `adb shell`
 
 ```console
-cd /usrdata/                         
+cd /usrdata
 chmod +x helloworld
-./ helloworld
+./helloworld
 ```
+
 __Result:__`<Hello OpenLinux !>` will be printed in Shell
 
-![N|Solid](../pics/EC25/helloworld.jpg)
+![N|Solid](../pics/EC25/ec25-demo1-helloworld-demo.jpg)
 
 ------------

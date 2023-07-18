@@ -2,7 +2,7 @@
 
 ------------
 
-__9.1 Load APP's binary using QEFS explorer__
+## 9.1 Load APP's binary using QEFS explorer
 
  - Use QEFS Explorer to flash the built binary on to dev kit<br>.
  ![N|Solid](../pics/BG96/bg96-qefs1.jpg)
@@ -13,7 +13,7 @@ __9.1 Load APP's binary using QEFS explorer__
   ![N|Solid](../pics/BG96/bg96-qefs4.jpg)<br>
   ![N|Solid](../pics/BG96/bg96-qefs5.jpg)<br>
   - Load the binary using QEFS Explorer from the below directory
-     - `C:\BG96\SW\BG96MAR04A02M1G_01.002.01.002\sdk\Quectel_BG96_QuecOpen_SDK_Package_V4.2.4\SDK\bin`
+     - `C:\BG96\SW\BG96MAR04A02M1G_01.002.01.002\SDK\Quectel_BG96_QuecOpen_SDK_Package_V4.2.4\SDK\bin`
   - select the binary files
    `oem_app_path.ini` and `build_quectel_demo_app.bat_xxxx.bin` drag and drop to QEFS explorer to flash the files on to the board<br>
        ![N|Solid](../pics/BG96/bg96-qefs6.jpg)<br>

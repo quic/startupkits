@@ -13,7 +13,7 @@ function LoadPage(index) {
                 var r = new FileReader();
                 r.onload = function(e) {
                     var contents = e.target.result;
-                    var convertor = new showdown.Converter(),
+                    var convertor = new showdown.Converter({'rawHeaderId': true}),
                         text = contents,
                         html = convertor.makeHtml(text)
 
@@ -24,8 +24,11 @@ function LoadPage(index) {
                     const mk = document.getElementById("markdown");
 
                     for(const h2 of mk.querySelectorAll("h1, h2, h3, h4, h5, h6"))
+                    {
+                        h2.id=h2.id.replace(/\./g, "-")
+                        h2.id=h2.id.replace(/_/g, "")
                         h2.innerHTML = `<a href="#${index}#${h2.id}">${h2.innerHTML}</a>`
-
+                    }
                     const id = location.hash.split("#")[2];
 
                     console.log(id)
@@ -70,7 +73,7 @@ function createCardString(name, pic) {
     title = `<header class="article-header"> <h2 class="article-title">` +
         name +  ` Development Kit` +
         `</h2> </header>`
-    image = `<img src=` + `"./pics/` + name + `/` + pic + `" alt="` + name + `" style="width:100%">`
+    image = `<img src=` + `"./pics/` + name + `/` + pic + `" alt="` + name + `" style="width:800px;margin:auto">`
     button = `<a href="./` + name + `" class="btn btn-primary">OnBoarding Documentation</a>`
     card_end = `</div>`
     return card_start + title + image + button + card_end
