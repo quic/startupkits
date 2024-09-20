@@ -17,4 +17,4 @@ Ideal users for startup platforms and kits include startups, incubators, interna
 Qualcomm Snapdragon, Qualcomm MDM9206, Qualcomm MDM9207 and Qualcomm SDM660 are products of Qualcomm Technologies, Inc., and/or its subsidiaries.
 
 ## License
-Startupkits is licensed under the SPDX-License-Identifier: BSD-3-Clause-Clear. Check out the [LICENSE](https://github.com/quic/startupkits/blob/main/LICENSE.txt) for more details.git 
+Startupkits is licensed under the SPDX-License-Identifier: BSD-3-Clause-Clear. Check out the [LICENSE](https://github.com/quic/startupkits/blob/main/LICENSE.txt) for more Details.git 
